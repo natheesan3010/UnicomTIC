@@ -1,6 +1,6 @@
 ﻿namespace Unicom_TIC_Management_System__UMS_
 {
-    partial class Form1
+    partial class loginform
     {
         /// <summary>
         /// Required designer variable.
@@ -28,109 +28,79 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.check_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCourses = new System.Windows.Forms.Button();
-            this.btnSubjects = new System.Windows.Forms.Button();
-            this.btnStudents = new System.Windows.Forms.Button();
-            this.btnExams = new System.Windows.Forms.Button();
-            this.btnMarks = new System.Windows.Forms.Button();
-            this.btnTimetables = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.userbox = new System.Windows.Forms.TextBox();
+            this.passbox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // check_btn
+            // 
+            this.check_btn.Location = new System.Drawing.Point(429, 251);
+            this.check_btn.Name = "check_btn";
+            this.check_btn.Size = new System.Drawing.Size(75, 23);
+            this.check_btn.TabIndex = 0;
+            this.check_btn.Text = "CHECK";
+            this.check_btn.UseVisualStyleBackColor = true;
+            this.check_btn.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.label1.Location = new System.Drawing.Point(223, 68);
+            this.label1.Location = new System.Drawing.Point(347, 88);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "UNICOM TIC MANAGEMENT SYSTEM";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "LOGIN FORM";
+            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // btnCourses
+            // label2
             // 
-            this.btnCourses.Location = new System.Drawing.Point(314, 128);
-            this.btnCourses.Name = "btnCourses";
-            this.btnCourses.Size = new System.Drawing.Size(149, 23);
-            this.btnCourses.TabIndex = 1;
-            this.btnCourses.Text = "MANAGE COURSES";
-            this.btnCourses.UseVisualStyleBackColor = true;
-            this.btnCourses.Click += new System.EventHandler(this.btnCourses_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(282, 141);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "USER NAME";
             // 
-            // btnSubjects
+            // userbox
             // 
-            this.btnSubjects.Location = new System.Drawing.Point(314, 173);
-            this.btnSubjects.Name = "btnSubjects";
-            this.btnSubjects.Size = new System.Drawing.Size(149, 23);
-            this.btnSubjects.TabIndex = 2;
-            this.btnSubjects.Text = "MANAGE SUBJECTS";
-            this.btnSubjects.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnSubjects.UseVisualStyleBackColor = true;
+            this.userbox.Location = new System.Drawing.Point(369, 138);
+            this.userbox.Name = "userbox";
+            this.userbox.Size = new System.Drawing.Size(135, 20);
+            this.userbox.TabIndex = 3;
             // 
-            // btnStudents
+            // passbox
             // 
-            this.btnStudents.Location = new System.Drawing.Point(314, 219);
-            this.btnStudents.Name = "btnStudents";
-            this.btnStudents.Size = new System.Drawing.Size(149, 23);
-            this.btnStudents.TabIndex = 3;
-            this.btnStudents.Text = "MANAGE STUDENTS";
-            this.btnStudents.UseVisualStyleBackColor = true;
+            this.passbox.Location = new System.Drawing.Point(370, 186);
+            this.passbox.Name = "passbox";
+            this.passbox.Size = new System.Drawing.Size(134, 20);
+            this.passbox.TabIndex = 4;
             // 
-            // btnExams
+            // label3
             // 
-            this.btnExams.Location = new System.Drawing.Point(314, 262);
-            this.btnExams.Name = "btnExams";
-            this.btnExams.Size = new System.Drawing.Size(149, 23);
-            this.btnExams.TabIndex = 4;
-            this.btnExams.Text = "MANAGE EXAMS";
-            this.btnExams.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(282, 193);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "PASSWORD";
             // 
-            // btnMarks
-            // 
-            this.btnMarks.Location = new System.Drawing.Point(314, 305);
-            this.btnMarks.Name = "btnMarks";
-            this.btnMarks.Size = new System.Drawing.Size(149, 23);
-            this.btnMarks.TabIndex = 5;
-            this.btnMarks.Text = "MANAGE MARKS";
-            this.btnMarks.UseVisualStyleBackColor = true;
-            // 
-            // btnTimetables
-            // 
-            this.btnTimetables.Location = new System.Drawing.Point(314, 348);
-            this.btnTimetables.Name = "btnTimetables";
-            this.btnTimetables.Size = new System.Drawing.Size(149, 23);
-            this.btnTimetables.TabIndex = 6;
-            this.btnTimetables.Text = "MANAGE TIMETABLES";
-            this.btnTimetables.UseVisualStyleBackColor = true;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Location = new System.Drawing.Point(314, 389);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(149, 23);
-            this.btnLogout.TabIndex = 7;
-            this.btnLogout.Text = "LOG OUT";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // Form1
+            // loginform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 440);
-            this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.btnTimetables);
-            this.Controls.Add(this.btnMarks);
-            this.Controls.Add(this.btnExams);
-            this.Controls.Add(this.btnStudents);
-            this.Controls.Add(this.btnSubjects);
-            this.Controls.Add(this.btnCourses);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.passbox);
+            this.Controls.Add(this.userbox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.check_btn);
+            this.Name = "loginform";
+            this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -139,14 +109,12 @@
 
         #endregion
 
+        private System.Windows.Forms.Button check_btn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnCourses;
-        private System.Windows.Forms.Button btnSubjects;
-        private System.Windows.Forms.Button btnStudents;
-        private System.Windows.Forms.Button btnExams;
-        private System.Windows.Forms.Button btnMarks;
-        private System.Windows.Forms.Button btnTimetables;
-        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox userbox;
+        private System.Windows.Forms.TextBox passbox;
+        private System.Windows.Forms.Label label3;
     }
 }
 
