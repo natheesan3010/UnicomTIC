@@ -8,12 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Unicom_TIC_Management_System__UMS_.Views;
 
 namespace Unicom_TIC_Management_System__UMS_
 {
-    public partial class Form1 : Form
+    public partial class loginform : Form
     {
-        public Form1()
+        public loginform()
         {
             InitializeComponent();
         }
@@ -33,9 +34,18 @@ namespace Unicom_TIC_Management_System__UMS_
 
         }
 
-        private void btnCourses_Click(object sender, EventArgs e)
+      
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainForm MainForm = new MainForm();
+            MainForm.ShowDialog();
+            
         }
     }
 }
