@@ -1,22 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Unicom_TIC_Management_System__UMS_.Views;
+using UnicomTICManagementSystem.Repositories;
 
-namespace Unicom_TIC_Management_System__UMS_
+
+namespace UnicomTICManagementSystem
 {
-    internal static class Program
+    static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
+            DatabaseManager.InitializeDatabase();  // <--- Ensures DB and default admin exists
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new loginform());
         }
+    }
+
+    internal class loginform : Form
+    {
     }
 }

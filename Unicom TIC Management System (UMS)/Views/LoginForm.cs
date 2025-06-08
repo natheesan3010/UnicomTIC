@@ -1,20 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SQLite;
 using System.Windows.Forms;
+using Unicom_TIC_Management_System__UMS_.Models;
 
 namespace Unicom_TIC_Management_System__UMS_.Views
 {
     public partial class LoginForm : Form
     {
+        private string connectionString = "Data Source=database.db;Version=3;";
+
         public LoginForm()
         {
             InitializeComponent();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            // Optional Initialization
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+
+            MainForm MainForm = new MainDashboard();
+            MainForm.Show();
+
         }
     }
 }
