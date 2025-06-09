@@ -47,9 +47,9 @@
             this.panelHeader.BackColor = System.Drawing.Color.LightGray;
             this.panelHeader.Controls.Add(this.lblHeading);
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(600, 41);
+            this.panelHeader.Size = new System.Drawing.Size(800, 50);
             this.panelHeader.TabIndex = 8;
             // 
             // lblHeading
@@ -58,9 +58,8 @@
             this.lblHeading.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.lblHeading.ForeColor = System.Drawing.Color.Black;
             this.lblHeading.Location = new System.Drawing.Point(0, 0);
-            this.lblHeading.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(600, 41);
+            this.lblHeading.Size = new System.Drawing.Size(800, 50);
             this.lblHeading.TabIndex = 0;
             this.lblHeading.Text = "UNICOM TIC MANAGEMENT SYSTEM";
             this.lblHeading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -69,20 +68,20 @@
             // panelMain
             // 
             this.panelMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMain.Location = new System.Drawing.Point(116, 47);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMain.Location = new System.Drawing.Point(155, 58);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(478, 311);
+            this.panelMain.Size = new System.Drawing.Size(637, 382);
             this.panelMain.TabIndex = 0;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // btnStudents
             // 
             this.btnStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStudents.Location = new System.Drawing.Point(0, 62);
-            this.btnStudents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStudents.Location = new System.Drawing.Point(0, 87);
+            this.btnStudents.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStudents.Name = "btnStudents";
-            this.btnStudents.Size = new System.Drawing.Size(112, 32);
+            this.btnStudents.Size = new System.Drawing.Size(149, 39);
             this.btnStudents.TabIndex = 1;
             this.btnStudents.Text = "Manage Students";
             this.btnStudents.UseVisualStyleBackColor = true;
@@ -91,10 +90,10 @@
             // btnCourses
             // 
             this.btnCourses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCourses.Location = new System.Drawing.Point(0, 109);
-            this.btnCourses.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCourses.Location = new System.Drawing.Point(0, 141);
+            this.btnCourses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCourses.Name = "btnCourses";
-            this.btnCourses.Size = new System.Drawing.Size(112, 32);
+            this.btnCourses.Size = new System.Drawing.Size(149, 39);
             this.btnCourses.TabIndex = 2;
             this.btnCourses.Text = "Manage Courses";
             this.btnCourses.UseVisualStyleBackColor = true;
@@ -103,10 +102,10 @@
             // btnSubjects
             // 
             this.btnSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubjects.Location = new System.Drawing.Point(0, 154);
-            this.btnSubjects.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubjects.Location = new System.Drawing.Point(0, 198);
+            this.btnSubjects.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSubjects.Name = "btnSubjects";
-            this.btnSubjects.Size = new System.Drawing.Size(112, 32);
+            this.btnSubjects.Size = new System.Drawing.Size(149, 39);
             this.btnSubjects.TabIndex = 3;
             this.btnSubjects.Text = "Manage Subjects";
             this.btnSubjects.UseVisualStyleBackColor = true;
@@ -115,10 +114,10 @@
             // btnExams
             // 
             this.btnExams.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExams.Location = new System.Drawing.Point(0, 199);
-            this.btnExams.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExams.Location = new System.Drawing.Point(0, 250);
+            this.btnExams.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExams.Name = "btnExams";
-            this.btnExams.Size = new System.Drawing.Size(112, 32);
+            this.btnExams.Size = new System.Drawing.Size(149, 39);
             this.btnExams.TabIndex = 4;
             this.btnExams.Text = "Manage Exams";
             this.btnExams.UseVisualStyleBackColor = true;
@@ -127,10 +126,10 @@
             // btnMarks
             // 
             this.btnMarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMarks.Location = new System.Drawing.Point(0, 241);
-            this.btnMarks.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMarks.Location = new System.Drawing.Point(0, 302);
+            this.btnMarks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMarks.Name = "btnMarks";
-            this.btnMarks.Size = new System.Drawing.Size(112, 32);
+            this.btnMarks.Size = new System.Drawing.Size(149, 39);
             this.btnMarks.TabIndex = 5;
             this.btnMarks.Text = "Manage Marks";
             this.btnMarks.UseVisualStyleBackColor = true;
@@ -139,10 +138,10 @@
             // btnTimetables
             // 
             this.btnTimetables.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimetables.Location = new System.Drawing.Point(-2, 281);
-            this.btnTimetables.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTimetables.Location = new System.Drawing.Point(-3, 350);
+            this.btnTimetables.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimetables.Name = "btnTimetables";
-            this.btnTimetables.Size = new System.Drawing.Size(112, 38);
+            this.btnTimetables.Size = new System.Drawing.Size(149, 47);
             this.btnTimetables.TabIndex = 6;
             this.btnTimetables.Text = "Manage Timetables";
             this.btnTimetables.UseVisualStyleBackColor = true;
@@ -151,10 +150,10 @@
             // btnLogout
             // 
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(-2, 327);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogout.Location = new System.Drawing.Point(-3, 404);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(112, 32);
+            this.btnLogout.Size = new System.Drawing.Size(149, 39);
             this.btnLogout.TabIndex = 7;
             this.btnLogout.Text = "Log Out";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -162,9 +161,9 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnStudents);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.btnCourses);
@@ -174,7 +173,7 @@
             this.Controls.Add(this.btnTimetables);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.panelHeader);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);

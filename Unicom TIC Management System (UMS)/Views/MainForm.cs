@@ -69,10 +69,10 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
        
 
-        // இந்த function-ல் Form load செய்ய தேவையில்லை, paint event UI redraw செய்யப்படுகிறது மட்டும்.
+        
         private void panelMain_Paint(object sender, PaintEventArgs e)
         {
-            // இதை அழிக்கவும் அல்லது காலியாக வைக்கவும்
+            
         }
 
         private void panelMain_Paint_1(object sender, PaintEventArgs e)
@@ -89,5 +89,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         {
 
         }
+
+        
     }
 }

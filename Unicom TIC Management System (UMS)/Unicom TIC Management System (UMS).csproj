@@ -118,7 +118,6 @@
     <Compile Include="Views\TimetableForm.Designer.cs">
       <DependentUpon>TimetableForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\UserService.cs" />
     <Compile Include="Views\WelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>

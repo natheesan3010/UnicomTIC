@@ -21,7 +21,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-43, 1);
+            this.panel1.Location = new System.Drawing.Point(-43, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(601, 30);
             this.panel1.TabIndex = 8;
@@ -32,13 +32,13 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(191, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 19);
+            this.label1.Size = new System.Drawing.Size(275, 23);
             this.label1.TabIndex = 7;
             this.label1.Text = "STUDENTS   MANAGEMENT";
             // 
             // StudentForm
             // 
-            this.ClientSize = new System.Drawing.Size(514, 339);
+            this.ClientSize = new System.Drawing.Size(556, 394);
             this.Controls.Add(this.panel1);
             this.Name = "StudentForm";
             this.Text = "StudentForm";
