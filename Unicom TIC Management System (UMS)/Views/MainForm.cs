@@ -6,20 +6,20 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 {
     public partial class MainForm : Form
     {
-        public MainForm(Models.User user)
+        public MainForm()
         {
             InitializeComponent();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            LoadForm(new WelcomeForm()); // ஆரம்பத்தில் Welcome Form
+            LoadForm(new WelcomeForm()); // first show Welcome Form
         }
 
 
         private void LoadForm(Form form)
         {
-            panelMain.Controls.Clear(); // பழைய Form-ஐ clear செய்க
+            panelMain.Controls.Clear(); // old  Form clear 
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
@@ -47,23 +47,23 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
         private void btnExams_Click(object sender, EventArgs e)
         {
-            LoadForm(new ExamForm()); // ✅ ShowDialog() வேண்டாம்
+            LoadForm(new ExamForm()); 
         }
 
         private void btnMarks_Click(object sender, EventArgs e)
         {
-            LoadForm(new MarkForm()); // ✅ ShowDialog() வேண்டாம்
+            LoadForm(new MarkForm()); 
         }
 
         private void btnTimetables_Click(object sender, EventArgs e)
         {
-            LoadForm(new TimetableForm()); // ✅ ShowDialog() வேண்டாம்
+            LoadForm(new TimetableForm()); 
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            this.Hide(); // MainForm மறைக்கப்படுகிறது
-            LoginForm loginForm = new LoginForm(); // ✅ முதல் எழுத்து capital
+            this.Hide(); // MainForm hiden
+            LoginForm loginForm = new LoginForm(); 
             loginForm.Show();
         }
 

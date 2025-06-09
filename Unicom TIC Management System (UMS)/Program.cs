@@ -11,10 +11,10 @@ namespace UnicomTICManagementSystem
         [STAThread]
         static void Main()
         {
-            DatabaseManager.InitializeDatabase();  // <--- Ensures DB and default admin exists
+            DatabaseManager.InitializeDatabase();  
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new loginform());
+            Application.Run(new LoginForm());
         }
     }
 

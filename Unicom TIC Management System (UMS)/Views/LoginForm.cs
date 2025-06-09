@@ -16,13 +16,13 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            // Optional Initialization
+            
         }
 
         private void btn_login_Click(object sender, EventArgs e)
         {
 
-            MainForm MainForm = new MainDashboard();
+            MainForm MainForm = new MainForm();
             MainForm.Show();
 
         }
