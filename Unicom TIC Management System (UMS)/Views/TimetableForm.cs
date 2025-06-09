@@ -16,5 +16,10 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         {
             InitializeComponent();
         }
+
+        private void TimetableForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

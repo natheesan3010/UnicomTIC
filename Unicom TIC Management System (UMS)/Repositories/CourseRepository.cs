@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Unicom_TIC_Management_System__UMS_.Models
+namespace Unicom_TIC_Management_System__UMS_.Repositories
 {
-    internal class Course
+    internal class CourseRepository
     {
     }
 }
