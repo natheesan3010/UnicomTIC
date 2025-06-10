@@ -44,10 +44,10 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(427, 139);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdd.Location = new System.Drawing.Point(290, 113);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.Size = new System.Drawing.Size(56, 19);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -56,50 +56,51 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // dgvCourse
             // 
             this.dgvCourse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCourse.Location = new System.Drawing.Point(55, 188);
-            this.dgvCourse.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvCourse.Location = new System.Drawing.Point(95, 161);
             this.dgvCourse.Name = "dgvCourse";
             this.dgvCourse.RowHeadersWidth = 51;
-            this.dgvCourse.Size = new System.Drawing.Size(519, 185);
+            this.dgvCourse.Size = new System.Drawing.Size(251, 150);
             this.dgvCourse.TabIndex = 1;
+            this.dgvCourse.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCourse_CellContentClick);
+            this.dgvCourse.DoubleClick += new System.EventHandler(this.CourseForm_Load);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(252, 139);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdate.Location = new System.Drawing.Point(192, 113);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(99, 23);
+            this.btnUpdate.Size = new System.Drawing.Size(74, 19);
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(115, 137);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Location = new System.Drawing.Point(95, 113);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(91, 23);
+            this.btnDelete.Size = new System.Drawing.Size(68, 19);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
             // 
             // lblCourseName
             // 
             this.lblCourseName.AutoSize = true;
             this.lblCourseName.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCourseName.Location = new System.Drawing.Point(135, 78);
-            this.lblCourseName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCourseName.Location = new System.Drawing.Point(92, 63);
             this.lblCourseName.Name = "lblCourseName";
-            this.lblCourseName.Size = new System.Drawing.Size(108, 19);
+            this.lblCourseName.Size = new System.Drawing.Size(81, 15);
             this.lblCourseName.TabIndex = 4;
             this.lblCourseName.Text = "Course Name";
             // 
             // txtCourseName
             // 
-            this.txtCourseName.Location = new System.Drawing.Point(260, 74);
-            this.txtCourseName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCourseName.Location = new System.Drawing.Point(182, 61);
             this.txtCourseName.Name = "txtCourseName";
-            this.txtCourseName.Size = new System.Drawing.Size(217, 22);
+            this.txtCourseName.Size = new System.Drawing.Size(164, 20);
             this.txtCourseName.TabIndex = 5;
             this.txtCourseName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -108,27 +109,25 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(801, 37);
+            this.panel1.Size = new System.Drawing.Size(601, 30);
             this.panel1.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(233, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(175, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 23);
+            this.label1.Size = new System.Drawing.Size(153, 19);
             this.label1.TabIndex = 7;
             this.label1.Text = "COURSE   DETAILS";
             // 
             // CourseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 417);
+            this.ClientSize = new System.Drawing.Size(514, 339);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtCourseName);
             this.Controls.Add(this.lblCourseName);
@@ -136,9 +135,10 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.dgvCourse);
             this.Controls.Add(this.btnAdd);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CourseForm";
             this.Text = "CourseForm";
+            this.Load += new System.EventHandler(this.CourseForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCourse)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

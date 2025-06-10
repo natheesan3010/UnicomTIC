@@ -20,65 +20,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             dgvCourse.DataSource = controller.GetAllCourses();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(txtCourseName.Text))
-            {
-                bool result = controller.AddCourse(txtCourseName.Text.Trim());
-                if (result)
-                {
-                    LoadCourses();
-                    txtCourseName.Clear();
-                }
-                else
-                {
-                    MessageBox.Show("Failed to add course. Check DB connection or controller logic.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Enter course name");
-            }
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            if (selectedCourseId != -1 && !string.IsNullOrEmpty(txtCourseName.Text))
-            {
-                controller.UpdateCourse(selectedCourseId, txtCourseName.Text.Trim());
-                LoadCourses();
-                txtCourseName.Clear();
-                selectedCourseId = -1;
-            }
-            else
-            {
-                MessageBox.Show("Select a course and enter new name");
-            }
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (selectedCourseId != -1)
-            {
-                controller.DeleteCourse(selectedCourseId);
-                LoadCourses();
-                txtCourseName.Clear();
-                selectedCourseId = -1;
-            }
-            else
-            {
-                MessageBox.Show("Select a course to delete");
-            }
-        }
-
-        private void dgvCourse_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                selectedCourseId = Convert.ToInt32(dgvCourse.Rows[e.RowIndex].Cells["Id"].Value);
-                txtCourseName.Text = dgvCourse.Rows[e.RowIndex].Cells["Name"].Value.ToString();
-            }
-        }
+        
 
         // btnAdd_Click_1 not needed anymore
         private void btnAdd_Click_1(object sender, EventArgs e)
@@ -101,5 +43,70 @@ namespace Unicom_TIC_Management_System__UMS_.Views
                 MessageBox.Show("Enter course name");
             }
         }
+
+        private void btnUpdate_Click_1(object sender, EventArgs e)
+        {
+            if (selectedCourseId != -1 && !string.IsNullOrWhiteSpace(txtCourseName.Text))
+            {
+                if (controller.UpdateCourse(selectedCourseId, txtCourseName.Text.Trim()))
+                {
+                    LoadCourses();
+                    txtCourseName.Clear();
+                    selectedCourseId = -1;
+                    MessageBox.Show("Course updated successfully!");
+                }
+                else
+                {
+                    MessageBox.Show("Error updating course.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a course and enter a new name.");
+            }
+        }
+
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            if (selectedCourseId != -1)
+            {
+                var confirmResult = MessageBox.Show("Are you sure to delete this course?",
+                    "Confirm Delete", MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    if (controller.DeleteCourse(selectedCourseId))
+                    {
+                        LoadCourses();
+                        txtCourseName.Clear();
+                        selectedCourseId = -1;
+                        MessageBox.Show("Course deleted successfully!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error deleting course.");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a course to delete.");
+            }
+        }
+
+        private void CourseForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvCourse_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvCourse.Rows[e.RowIndex];
+                selectedCourseId = Convert.ToInt32(dgvCourse.Rows[e.RowIndex].Cells[0].Value);
+                txtCourseName.Text = dgvCourse.Rows[e.RowIndex].Cells[1].Value.ToString();
+            }
+        }
+
     }
 }

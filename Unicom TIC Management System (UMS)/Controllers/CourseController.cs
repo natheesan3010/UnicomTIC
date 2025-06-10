@@ -14,8 +14,8 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
             using (var conn = new SQLiteConnection(connectionString))
             {
                 conn.Open();
-                var cmd = new SQLiteCommand("INSERT INTO Courses (Name) VALUES (@Name)", conn);
-                cmd.Parameters.AddWithValue("@Name", courseName);
+                var cmd = new SQLiteCommand("INSERT INTO Courses (courseName) VALUES (@courseName)", conn);
+                cmd.Parameters.AddWithValue("@courseName", courseName);
                 int result = cmd.ExecuteNonQuery();
                 return result > 0;
             }
