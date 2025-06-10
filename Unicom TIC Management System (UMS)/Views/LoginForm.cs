@@ -7,7 +7,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 {
     public partial class LoginForm : Form
     {
-        private string connectionString = "Data Source=database.db;Version=3;";
+        private string connectionString = "Data Source=unicomtic.db;Version=3;";
 
         public LoginForm()
         {

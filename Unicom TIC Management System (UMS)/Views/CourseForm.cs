@@ -1,95 +1,118 @@
 ﻿using System;
+using System.Data;
+using System.Data.SQLite;
 using System.Windows.Forms;
-using Unicom_TIC_Management_System__UMS_.Controllers;
 
 namespace Unicom_TIC_Management_System__UMS_.Views
 {
     public partial class CourseForm : Form
     {
-        private CourseController controller = new CourseController();
         private int selectedCourseId = -1;
+        private SQLiteConnection conn;
 
         public CourseForm()
         {
             InitializeComponent();
+            conn = new SQLiteConnection("Data Source=unicomtic.db;Version=3;");
+            conn.Open();
             LoadCourses();
         }
 
         private void LoadCourses()
         {
-            dgvCourse.DataSource = controller.GetAllCourses();
+            string query = "SELECT CourseId, CourseName FROM Courses";
+            using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+            using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd))
+            {
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                dgvCourse.DataSource = dt;
+            }
+
+            dgvCourse.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
-        
-
-        // btnAdd_Click_1 not needed anymore
-        private void btnAdd_Click_1(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtCourseName.Text))
+            string coursename = txtCourseName.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(coursename))
             {
-                bool result = controller.AddCourse(txtCourseName.Text.Trim());
-                if (result)
-                {
-                    LoadCourses();
-                    txtCourseName.Clear();
-                }
-                else
-                {
-                    MessageBox.Show("Failed to add course. Check DB connection or controller logic.");
-                }
+                MessageBox.Show("Course Name இடுக.");
+                return;
             }
-            else
+
+            string query = "INSERT INTO Courses (CourseName) VALUES (@CourseName)";
+            using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
             {
-                MessageBox.Show("Enter course name");
+                cmd.Parameters.AddWithValue("@CourseName", coursename);
+                cmd.ExecuteNonQuery();
             }
+
+            MessageBox.Show("Course வெற்றிகரமாக சேர்க்கப்பட்டது.");
+            txtCourseName.Clear();
+            selectedCourseId = -1;
+            LoadCourses();
         }
 
-        private void btnUpdate_Click_1(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (selectedCourseId != -1 && !string.IsNullOrWhiteSpace(txtCourseName.Text))
+            if (selectedCourseId == -1)
             {
-                if (controller.UpdateCourse(selectedCourseId, txtCourseName.Text.Trim()))
-                {
-                    LoadCourses();
-                    txtCourseName.Clear();
-                    selectedCourseId = -1;
-                    MessageBox.Show("Course updated successfully!");
-                }
-                else
-                {
-                    MessageBox.Show("Error updating course.");
-                }
+                MessageBox.Show("தயவுசெய்து Course ஐ தேர்வு செய்யவும்.");
+                return;
             }
-            else
+
+            string coursename = txtCourseName.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(coursename))
             {
-                MessageBox.Show("Please select a course and enter a new name.");
+                MessageBox.Show("Course Name இடுக.");
+                return;
             }
+
+            string query = "UPDATE Courses SET CourseName = @CourseName WHERE Id = @Id";
+            using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@CourseName", coursename);
+                cmd.Parameters.AddWithValue("@Id", selectedCourseId);
+                cmd.ExecuteNonQuery();
+            }
+
+            MessageBox.Show("Course வெற்றிகரமாக புதுப்பிக்கப்பட்டது.");
+            txtCourseName.Clear();
+            selectedCourseId = -1;
+            LoadCourses();
         }
 
-        private void btnDelete_Click_1(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (selectedCourseId != -1)
+            if (selectedCourseId == -1)
             {
-                var confirmResult = MessageBox.Show("Are you sure to delete this course?",
-                    "Confirm Delete", MessageBoxButtons.YesNo);
-                if (confirmResult == DialogResult.Yes)
-                {
-                    if (controller.DeleteCourse(selectedCourseId))
-                    {
-                        LoadCourses();
-                        txtCourseName.Clear();
-                        selectedCourseId = -1;
-                        MessageBox.Show("Course deleted successfully!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error deleting course.");
-                    }
-                }
+                MessageBox.Show("Course தேர்வு செய்யவும்.");
+                return;
             }
-            else
+
+            string query = "DELETE FROM Courses WHERE Id = @Id";
+            using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
             {
-                MessageBox.Show("Please select a course to delete.");
+                cmd.Parameters.AddWithValue("@Id", selectedCourseId);
+                cmd.ExecuteNonQuery();
+            }
+
+            MessageBox.Show("Course வெற்றிகரமாக நீக்கப்பட்டது.");
+            txtCourseName.Clear();
+            selectedCourseId = -1;
+            LoadCourses();
+        }
+
+        private void dgvCourse_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvCourse.Rows[e.RowIndex];
+                selectedCourseId = Convert.ToInt32(row.Cells["Id"].Value);
+                txtCourseName.Text = row.Cells["CourseName"].Value.ToString();
             }
         }
 
@@ -97,16 +120,5 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         {
 
         }
-
-        private void dgvCourse_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dgvCourse.Rows[e.RowIndex];
-                selectedCourseId = Convert.ToInt32(dgvCourse.Rows[e.RowIndex].Cells[0].Value);
-                txtCourseName.Text = dgvCourse.Rows[e.RowIndex].Cells[1].Value.ToString();
-            }
-        }
-
     }
 }

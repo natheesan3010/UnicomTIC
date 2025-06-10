@@ -9,9 +9,8 @@ namespace Unicom_TIC_Management_System__UMS_.Models
     public class User
     {
         public int StudentID { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public object Role { get; internal set; }
-        public int UserID { get; internal set; }
+        public string StudentName { get; set; }
+        public string NIC_NO { get; set; }
+        
     }
 }

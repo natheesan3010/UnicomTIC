@@ -50,7 +50,8 @@ namespace UnicomTICManagementSystem.Repositories
                 string createStudentsTable = @"
                 CREATE TABLE IF NOT EXISTS Students (
                     StudentID INTEGER PRIMARY KEY AUTOINCREMENT,
-                    Name TEXT NOT NULL,
+                    StudentName TEXT NOT NULL,
+                    NIC NO TEXT NOT NULL,
                     CourseID INTEGER,
                     FOREIGN KEY(CourseID) REFERENCES Courses(CourseID)
                 );";
