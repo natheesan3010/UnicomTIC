@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Unicom_TIC_Management_System__UMS_.Models;
 
 
 namespace Unicom_TIC_Management_System__UMS_.Views
@@ -9,6 +10,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         public MainForm()
         {
             InitializeComponent();
+            
         }
 
         private void MainForm_Load(object sender, EventArgs e)

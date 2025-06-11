@@ -35,34 +35,34 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         private void btn_add_Click(object sender, EventArgs e)
         {
             string name = tname.Text.Trim();
-            string address = taddress.Text.Trim();
+            string nic = tnic.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(address))
+            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(nic))
             {
                 MessageBox.Show("Please enter both Name and Address.");
                 return;
             }
 
             const string sql =
-                "INSERT INTO Students (StudentName, NIC_NO) VALUES (@StudentName, @NIC_NO)";
+                "INSERT INTO Students (StudentName, NIC) VALUES (@StudentName, @NIC)";
 
             using (var cmd = new SQLiteCommand(sql, _conn))
             {
                 cmd.Parameters.AddWithValue("@StudentName", name);
-                cmd.Parameters.AddWithValue("@NIC_NO", address);
+                cmd.Parameters.AddWithValue("@NIC", nic);
                 cmd.ExecuteNonQuery();
             }
 
             MessageBox.Show("Student added successfully.");
             tname.Clear();
-            taddress.Clear();
+            tnic.Clear();
             LoadStudentData();
         }
 
         /* ----------  Grid helper  ---------- */
         private void LoadStudentData()
         {
-            const string sql = "SELECT Id, StudentName, NIC_NO FROM Students";
+            const string sql = "SELECT StudentID, StudentName, NIC FROM Students"; 
             using (var da = new SQLiteDataAdapter(sql, _conn))
             {
                 var dt = new DataTable();
@@ -76,33 +76,12 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             if (e.RowIndex < 0) return;
 
             var row = student_data.Rows[e.RowIndex];
-            selectedStudentId = Convert.ToInt32(row.Cells["Id"].Value);
+            selectedStudentId = Convert.ToInt32(row.Cells["StudentID"].Value);
             tname.Text = row.Cells["StudentName"].Value.ToString();
-            taddress.Text = row.Cells["NIC_NO"].Value.ToString();
+            tnic.Text = row.Cells["NIC"].Value.ToString();
         }
 
-        /* ----------  Delete  ---------- */
-        private void btn_delete_Click(object sender, EventArgs e)
-        {
-            if (selectedStudentId == -1)
-            {
-                MessageBox.Show("Please select a student to delete.");
-                return;
-            }
-
-            const string sql = "DELETE FROM Students WHERE Id = @Id";
-            using (var cmd = new SQLiteCommand(sql, _conn))
-            {
-                cmd.Parameters.AddWithValue("@Id", selectedStudentId);
-                cmd.ExecuteNonQuery();
-            }
-
-            MessageBox.Show("Student deleted successfully.");
-            selectedStudentId = -1;
-            tname.Clear();
-            taddress.Clear();
-            LoadStudentData();
-        }
+        
 
         /* ----------  Update  ---------- */
         private void btn_update_Click(object sender, EventArgs e)
@@ -114,11 +93,11 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             }
 
             string name = tname.Text.Trim();
-            string address = taddress.Text.Trim();
+            string nic = tnic.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(address))
+            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(nic))
             {
-                MessageBox.Show("Please enter both Name and Address.");
+                MessageBox.Show("Please Enter The Name and NIC.");
                 return;
             }
 
@@ -130,7 +109,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             using (var cmd = new SQLiteCommand(sql, _conn))
             {
                 cmd.Parameters.AddWithValue("@StudentName", name);
-                cmd.Parameters.AddWithValue("@NIC_NO", address);
+                cmd.Parameters.AddWithValue("@NIC_NO", nic);
                 cmd.Parameters.AddWithValue("@Id", selectedStudentId);
                 cmd.ExecuteNonQuery();
             }
@@ -138,8 +117,32 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             MessageBox.Show("Student updated successfully.");
             selectedStudentId = -1;
             tname.Clear();
-            taddress.Clear();
+            tnic.Clear();
             LoadStudentData();
+        }
+
+        private void btn_delete_Click_1(object sender, EventArgs e)
+        {
+            {
+                if (selectedStudentId == -1)
+                {
+                    MessageBox.Show("Please select a student to delete.");
+                    return;
+                }
+
+                const string sql = "DELETE FROM Students WHERE ID= @ID";
+                using (var cmd = new SQLiteCommand(sql, _conn))
+                {
+                    cmd.Parameters.AddWithValue("@ID", selectedStudentId);
+                    cmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Student deleted successfully.");
+                selectedStudentId = -1;
+                tname.Clear();
+                tnic.Clear();
+                LoadStudentData();
+            }
         }
     }
 }

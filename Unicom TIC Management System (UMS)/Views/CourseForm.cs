@@ -38,7 +38,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
             if (string.IsNullOrWhiteSpace(coursename))
             {
-                MessageBox.Show("Course Name இடுக.");
+                MessageBox.Show("Please Add The Course Name.");
                 return;
             }
 
@@ -49,7 +49,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
                 cmd.ExecuteNonQuery();
             }
 
-            MessageBox.Show("Course வெற்றிகரமாக சேர்க்கப்பட்டது.");
+            MessageBox.Show("Course Add Successfully! ");
             txtCourseName.Clear();
             selectedCourseId = -1;
             LoadCourses();
@@ -59,7 +59,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         {
             if (selectedCourseId == -1)
             {
-                MessageBox.Show("தயவுசெய்து Course ஐ தேர்வு செய்யவும்.");
+                MessageBox.Show("Please Select The Course!");
                 return;
             }
 
@@ -67,7 +67,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
             if (string.IsNullOrWhiteSpace(coursename))
             {
-                MessageBox.Show("Course Name இடுக.");
+                MessageBox.Show("Please Add The Course Name.");
                 return;
             }
 
@@ -79,7 +79,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
                 cmd.ExecuteNonQuery();
             }
 
-            MessageBox.Show("Course வெற்றிகரமாக புதுப்பிக்கப்பட்டது.");
+            MessageBox.Show("Course Update Successfully!");
             txtCourseName.Clear();
             selectedCourseId = -1;
             LoadCourses();
@@ -89,7 +89,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         {
             if (selectedCourseId == -1)
             {
-                MessageBox.Show("Course தேர்வு செய்யவும்.");
+                MessageBox.Show("Please Select The Course!.");
                 return;
             }
 
@@ -100,7 +100,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
                 cmd.ExecuteNonQuery();
             }
 
-            MessageBox.Show("Course வெற்றிகரமாக நீக்கப்பட்டது.");
+            MessageBox.Show("Course Deleted Successfully!");
             txtCourseName.Clear();
             selectedCourseId = -1;
             LoadCourses();

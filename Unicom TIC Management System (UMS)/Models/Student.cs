@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Unicom_TIC_Management_System__UMS_.Models
 {
-    public class User
+    public class Student
     {
         public int StudentID { get; set; }
         public string StudentName { get; set; }

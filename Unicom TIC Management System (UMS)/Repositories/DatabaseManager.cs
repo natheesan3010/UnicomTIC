@@ -51,7 +51,7 @@ namespace UnicomTICManagementSystem.Repositories
                 CREATE TABLE IF NOT EXISTS Students (
                     StudentID INTEGER PRIMARY KEY AUTOINCREMENT,
                     StudentName TEXT NOT NULL,
-                    NIC NO TEXT NOT NULL,
+                    NIC INTEGER NOT NULL,
                     CourseID INTEGER,
                     FOREIGN KEY(CourseID) REFERENCES Courses(CourseID)
                 );";

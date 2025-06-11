@@ -34,15 +34,15 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtusername = new System.Windows.Forms.TextBox();
-            this.txtpassword = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn_login
             // 
             this.btn_login.Font = new System.Drawing.Font("Microsoft YaHei", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.Location = new System.Drawing.Point(256, 222);
-            this.btn_login.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_login.Margin = new System.Windows.Forms.Padding(2);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(101, 41);
             this.btn_login.TabIndex = 0;
@@ -82,35 +82,35 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.label3.TabIndex = 3;
             this.label3.Text = "PASSWORD";
             // 
-            // txtusername
+            // txtUsername
             // 
-            this.txtusername.Location = new System.Drawing.Point(218, 109);
-            this.txtusername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtusername.Name = "txtusername";
-            this.txtusername.Size = new System.Drawing.Size(140, 20);
-            this.txtusername.TabIndex = 4;
-            this.txtusername.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtUsername.Location = new System.Drawing.Point(218, 109);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(140, 20);
+            this.txtUsername.TabIndex = 4;
+            this.txtUsername.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // txtpassword
+            // txtPassword
             // 
-            this.txtpassword.Location = new System.Drawing.Point(218, 158);
-            this.txtpassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtpassword.Name = "txtpassword";
-            this.txtpassword.Size = new System.Drawing.Size(140, 20);
-            this.txtpassword.TabIndex = 5;
+            this.txtPassword.Location = new System.Drawing.Point(218, 158);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(140, 20);
+            this.txtPassword.TabIndex = 5;
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(514, 339);
-            this.Controls.Add(this.txtpassword);
-            this.Controls.Add(this.txtusername);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_login);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
@@ -130,7 +130,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtusername;
-        private System.Windows.Forms.TextBox txtpassword;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtPassword;
     }
 }
