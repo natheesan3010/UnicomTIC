@@ -113,6 +113,12 @@
     <Compile Include="Views\MarkForm.Designer.cs">
       <DependentUpon>MarkForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\StudentDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\StudentDashBoard.Designer.cs">
+      <DependentUpon>StudentDashBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\StudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,11 +131,11 @@
     <Compile Include="Views\SubjectForm.Designer.cs">
       <DependentUpon>SubjectForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\TeacherForm.cs">
+    <Compile Include="Views\TeacherDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\TeacherForm.Designer.cs">
-      <DependentUpon>TeacherForm.cs</DependentUpon>
+    <Compile Include="Views\TeacherDashBoard.Designer.cs">
+      <DependentUpon>TeacherDashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\TimetableForm.cs">
       <SubType>Form</SubType>
@@ -168,14 +174,17 @@
     <EmbeddedResource Include="Views\MarkForm.resx">
       <DependentUpon>MarkForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\StudentDashBoard.resx">
+      <DependentUpon>StudentDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\StudentForm.resx">
       <DependentUpon>StudentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SubjectForm.resx">
       <DependentUpon>SubjectForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\TeacherForm.resx">
-      <DependentUpon>TeacherForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\TeacherDashBoard.resx">
+      <DependentUpon>TeacherDashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TimetableForm.resx">
       <DependentUpon>TimetableForm.cs</DependentUpon>
@@ -198,6 +207,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\logo.png" />
     <Content Include="Resources\welcome.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

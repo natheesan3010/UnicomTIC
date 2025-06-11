@@ -29,7 +29,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
             this.lblWelcome.ForeColor = System.Drawing.Color.Navy;
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblWelcome.Text = "Welcome to Unicom TIC Management System";
+            this.lblWelcome.Text = "Welcome to Unicom TIC ";
             this.lblWelcome.Height = 50;
 
             // 

@@ -61,6 +61,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ExamForm";
             this.Text = "Exam Management";
+            this.Load += new System.EventHandler(this.ExamForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
