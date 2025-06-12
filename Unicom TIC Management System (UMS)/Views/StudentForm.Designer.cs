@@ -22,8 +22,10 @@
             this.tname = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.student_data)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -41,14 +43,14 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(191, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 19);
+            this.label1.Size = new System.Drawing.Size(275, 23);
             this.label1.TabIndex = 7;
             this.label1.Text = "STUDENTS   MANAGEMENT";
             // 
             // student_data
             // 
             this.student_data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.student_data.Location = new System.Drawing.Point(79, 164);
+            this.student_data.Location = new System.Drawing.Point(41, 132);
             this.student_data.Margin = new System.Windows.Forms.Padding(4);
             this.student_data.Name = "student_data";
             this.student_data.RowHeadersWidth = 51;
@@ -57,7 +59,7 @@
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(79, 114);
+            this.btn_delete.Location = new System.Drawing.Point(41, 82);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(98, 34);
@@ -68,7 +70,7 @@
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(201, 114);
+            this.btn_update.Location = new System.Drawing.Point(163, 82);
             this.btn_update.Margin = new System.Windows.Forms.Padding(4);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(100, 34);
@@ -79,7 +81,7 @@
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(324, 114);
+            this.btn_add.Location = new System.Drawing.Point(286, 82);
             this.btn_add.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(98, 34);
@@ -90,51 +92,62 @@
             // 
             // tnic
             // 
-            this.tnic.Location = new System.Drawing.Point(209, 79);
+            this.tnic.Location = new System.Drawing.Point(171, 47);
             this.tnic.Margin = new System.Windows.Forms.Padding(4);
             this.tnic.Name = "tnic";
-            this.tnic.Size = new System.Drawing.Size(204, 20);
+            this.tnic.Size = new System.Drawing.Size(212, 22);
             this.tnic.TabIndex = 12;
             // 
             // tname
             // 
-            this.tname.Location = new System.Drawing.Point(210, 46);
+            this.tname.Location = new System.Drawing.Point(172, 14);
             this.tname.Margin = new System.Windows.Forms.Padding(4);
             this.tname.Name = "tname";
-            this.tname.Size = new System.Drawing.Size(204, 20);
+            this.tname.Size = new System.Drawing.Size(211, 22);
             this.tname.TabIndex = 11;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(96, 82);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(58, 50);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(71, 17);
             this.label2.TabIndex = 10;
             this.label2.Text = "NIC NO : ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(94, 46);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(56, 14);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 13);
+            this.label3.Size = new System.Drawing.Size(71, 17);
             this.label3.TabIndex = 9;
             this.label3.Text = "NAME   : ";
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.student_data);
+            this.panel2.Controls.Add(this.btn_delete);
+            this.panel2.Controls.Add(this.btn_update);
+            this.panel2.Controls.Add(this.btn_add);
+            this.panel2.Controls.Add(this.tnic);
+            this.panel2.Controls.Add(this.tname);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(38, 37);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(422, 308);
+            this.panel2.TabIndex = 17;
             // 
             // StudentForm
             // 
             this.ClientSize = new System.Drawing.Size(556, 394);
-            this.Controls.Add(this.student_data);
-            this.Controls.Add(this.btn_delete);
-            this.Controls.Add(this.btn_update);
-            this.Controls.Add(this.btn_add);
-            this.Controls.Add(this.tnic);
-            this.Controls.Add(this.tname);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "StudentForm";
             this.Text = "StudentForm";
@@ -142,8 +155,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.student_data)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -157,5 +171,6 @@
         private System.Windows.Forms.TextBox tname;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel2;
     }
 }

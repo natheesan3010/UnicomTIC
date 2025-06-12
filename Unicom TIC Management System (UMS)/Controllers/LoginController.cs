@@ -36,8 +36,5 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
                 loginForm.ShowError("Invalid login credentials");
             }
         }
-
-        
-
     }
 }

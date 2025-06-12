@@ -38,13 +38,15 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.txtCourseName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCourse)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(387, 139);
+            this.btnAdd.Location = new System.Drawing.Point(310, 80);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
@@ -56,7 +58,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // dgvCourse
             // 
             this.dgvCourse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCourse.Location = new System.Drawing.Point(127, 198);
+            this.dgvCourse.Location = new System.Drawing.Point(50, 139);
             this.dgvCourse.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCourse.Name = "dgvCourse";
             this.dgvCourse.RowHeadersWidth = 51;
@@ -68,7 +70,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(251, 139);
+            this.btnUpdate.Location = new System.Drawing.Point(174, 80);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(99, 23);
@@ -79,7 +81,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(127, 139);
+            this.btnDelete.Location = new System.Drawing.Point(50, 80);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(91, 23);
@@ -92,7 +94,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             this.lblCourseName.AutoSize = true;
             this.lblCourseName.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCourseName.Location = new System.Drawing.Point(123, 78);
+            this.lblCourseName.Location = new System.Drawing.Point(46, 19);
             this.lblCourseName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCourseName.Name = "lblCourseName";
             this.lblCourseName.Size = new System.Drawing.Size(108, 19);
@@ -101,7 +103,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             // txtCourseName
             // 
-            this.txtCourseName.Location = new System.Drawing.Point(243, 75);
+            this.txtCourseName.Location = new System.Drawing.Point(166, 16);
             this.txtCourseName.Margin = new System.Windows.Forms.Padding(4);
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.Size = new System.Drawing.Size(217, 22);
@@ -129,18 +131,28 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.label1.TabIndex = 7;
             this.label1.Text = "COURSE   DETAILS";
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.txtCourseName);
+            this.panel2.Controls.Add(this.lblCourseName);
+            this.panel2.Controls.Add(this.btnDelete);
+            this.panel2.Controls.Add(this.btnUpdate);
+            this.panel2.Controls.Add(this.dgvCourse);
+            this.panel2.Controls.Add(this.btnAdd);
+            this.panel2.Location = new System.Drawing.Point(77, 59);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(428, 333);
+            this.panel2.TabIndex = 7;
+            // 
             // CourseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(685, 417);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtCourseName);
-            this.Controls.Add(this.lblCourseName);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.dgvCourse);
-            this.Controls.Add(this.btnAdd);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CourseForm";
             this.Text = "CourseForm";
@@ -148,8 +160,9 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             ((System.ComponentModel.ISupportInitialize)(this.dgvCourse)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -168,5 +181,6 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         private System.Windows.Forms.TextBox txtCourseName;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

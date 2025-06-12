@@ -36,9 +36,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cboRole = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cboRole = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -123,25 +123,6 @@
             this.panel1.Size = new System.Drawing.Size(392, 355);
             this.panel1.TabIndex = 8;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(24, 190);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 20);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "ROLE";
-            // 
-            // cboRole
-            // 
-            this.cboRole.FormattingEnabled = true;
-            this.cboRole.Location = new System.Drawing.Point(145, 186);
-            this.cboRole.Name = "cboRole";
-            this.cboRole.Size = new System.Drawing.Size(185, 24);
-            this.cboRole.TabIndex = 8;
-            this.cboRole.SelectedIndexChanged += new System.EventHandler(this.cboRole_SelectedIndexChanged);
-            // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -159,6 +140,25 @@
             this.panel2.Size = new System.Drawing.Size(356, 316);
             this.panel2.TabIndex = 9;
             // 
+            // cboRole
+            // 
+            this.cboRole.FormattingEnabled = true;
+            this.cboRole.Location = new System.Drawing.Point(145, 186);
+            this.cboRole.Name = "cboRole";
+            this.cboRole.Size = new System.Drawing.Size(185, 24);
+            this.cboRole.TabIndex = 8;
+            this.cboRole.SelectedIndexChanged += new System.EventHandler(this.cboRole_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(24, 190);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 20);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "ROLE";
+            // 
             // Newaccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -167,6 +167,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Newaccount";
             this.Text = "Newaccount";
+            this.Load += new System.EventHandler(this.Newaccount_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

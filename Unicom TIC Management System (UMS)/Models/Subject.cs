@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Unicom_TIC_Management_System__UMS_.Models
 {
-    internal class Subject
+    public class Subject
     {
+        public int SubjectID { get; set; }
+        public string SubjectName { get; set; }
+        public int CourseID { get; set; }
+        public string CourseName { get; set; } // Optional, for displaying with JOIN
     }
 }

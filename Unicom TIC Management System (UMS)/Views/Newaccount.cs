@@ -1,59 +1,59 @@
 ﻿using System;
-using System.Data.SQLite;
 using System.Windows.Forms;
+using Unicom_TIC_Management_System__UMS_.Controllers;
 using Unicom_TIC_Management_System__UMS_.Models;
 
 namespace Unicom_TIC_Management_System__UMS_.Views
 {
-    // NOTE: partial ==> joins with Newaccount.Designer.cs
     public partial class Newaccount : Form
     {
-        private readonly SQLiteConnection _conn =
-            new SQLiteConnection("Data Source=unicomtic.db;Version=3;");
+        private readonly _UserController _controller = new _UserController();
 
         public Newaccount()
         {
             InitializeComponent();
-
-            // ---- ComboBox set-up ONCE ----
             cboRole.Items.AddRange(new[] { "admin", "teacher", "student" });
             cboRole.SelectedIndex = 0;
             cboRole.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
-        // ------------------------ Back button ------------------------
+        private void Newaccount_Load(object sender, EventArgs e) { }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             new LoginForm().Show();
             this.Hide();
         }
 
-        // --------------------- Register button -----------------------
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            string username = txtUsername.Text.Trim();
-            string password = txtPassword.Text.Trim();
-            string role = cboRole.SelectedItem.ToString();
+            var user = new User
+            {
+                Username = txtUsername.Text.Trim(),
+                Password = txtPassword.Text.Trim(),
+                Role = cboRole.SelectedItem.ToString()
+            };
 
-            var repo = new _UserRepository();
-            bool result = repo.AddUserIfNotExists(username, password, role);
+            if (string.IsNullOrWhiteSpace(user.Username) || string.IsNullOrWhiteSpace(user.Password))
+            {
+                MessageBox.Show("Username மற்றும் Password ஐ உள்ளிடவும்.", "விருப்பம் தேவை", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            bool result = _controller.AddUserIfNotExists(user);
 
             if (result)
             {
-                MessageBox.Show("Registration successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("பதிவுபெறல் வெற்றிகரமாக முடிந்தது!", "வெற்றி", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 new LoginForm().Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Username already exists!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("இந்த Username ஏற்கனவே உள்ளது!", "பிழை", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        // Newaccount.cs – Logic file
-        private void cboRole_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Event no longer needed; kept only to satisfy Designer hook.
-        }
+        private void cboRole_SelectedIndexChanged(object sender, EventArgs e) { }
     }
 }
