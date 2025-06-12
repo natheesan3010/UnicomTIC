@@ -20,7 +20,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
         private void LoadCourses()
         {
-            string query = "SELECT CourseId, CourseName FROM Courses";
+            string query = "SELECT CourseID AS Id, CourseName FROM Courses";
             using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
             using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(cmd))
             {
@@ -28,9 +28,11 @@ namespace Unicom_TIC_Management_System__UMS_.Views
                 adapter.Fill(dt);
                 dgvCourse.DataSource = dt;
             }
-
             dgvCourse.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvCourse.AutoGenerateColumns = true;  // இதும் சேர்த்திருக்கவும்
         }
+
+
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -71,7 +73,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
                 return;
             }
 
-            string query = "UPDATE Courses SET CourseName = @CourseName WHERE Id = @Id";
+            string query = "UPDATE Courses SET CourseName = @CourseName WHERE CourseID = @Id";
             using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
             {
                 cmd.Parameters.AddWithValue("@CourseName", coursename);
@@ -93,11 +95,26 @@ namespace Unicom_TIC_Management_System__UMS_.Views
                 return;
             }
 
-            string query = "DELETE FROM Courses WHERE Id = @Id";
+            string query = "DELETE FROM Courses WHERE CourseID = @Id";
             using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
             {
                 cmd.Parameters.AddWithValue("@Id", selectedCourseId);
                 cmd.ExecuteNonQuery();
+            }
+
+            // ✅ Check if table is now empty → Reset AutoIncrement
+            string countQuery = "SELECT COUNT(*) FROM Courses";
+            using (SQLiteCommand countCmd = new SQLiteCommand(countQuery, conn))
+            {
+                int count = Convert.ToInt32(countCmd.ExecuteScalar());
+                if (count == 0)
+                {
+                    string resetQuery = "DELETE FROM sqlite_sequence WHERE name='Courses';";
+                    using (SQLiteCommand resetCmd = new SQLiteCommand(resetQuery, conn))
+                    {
+                        resetCmd.ExecuteNonQuery();
+                    }
+                }
             }
 
             MessageBox.Show("Course Deleted Successfully!");
@@ -106,19 +123,43 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             LoadCourses();
         }
 
+
         private void dgvCourse_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvCourse.Rows[e.RowIndex];
-                selectedCourseId = Convert.ToInt32(row.Cells["Id"].Value);
-                txtCourseName.Text = row.Cells["CourseName"].Value.ToString();
+                // Console அல்லது MessageBox கொண்டு columns inspect பண்ணவும்:
+                string courseIdStr = row.Cells["Id"].Value?.ToString();
+                string courseNameStr = row.Cells["CourseName"].Value?.ToString();
+
+                if (!string.IsNullOrEmpty(courseIdStr))
+                    selectedCourseId = Convert.ToInt32(courseIdStr);
+
+                if (!string.IsNullOrEmpty(courseNameStr))
+                    txtCourseName.Text = courseNameStr;
+                else
+                    txtCourseName.Text = "";
             }
         }
+
+
 
         private void CourseForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvCourse_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvCourse.Rows[e.RowIndex];
+
+                // CourseID (Id) மற்றும் CourseName textbox-ல் நிரப்புங்கள்
+                selectedCourseId = Convert.ToInt32(row.Cells["Id"].Value);
+                txtCourseName.Text = row.Cells["CourseName"].Value.ToString();
+            }
         }
     }
 }

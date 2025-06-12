@@ -2,19 +2,20 @@
 using System;
 using Unicom_TIC_Management_System__UMS_.Models;
 
-public class UserRepository
+public class _UserRepository
 {
+    
     private string _connectionString = "Data Source=unicomtic.db;Version=3;";
 
     public User GetUser(string username, string password)
     {
-        using (var conn = new SQLiteConnection(_connectionString))
+        using (var conn = new SQLiteConnection("Data Source=unicomtic.db;Version=3;"))
         {
             conn.Open();
-            string query = "SELECT * FROM Users WHERE Username = @username AND Password = @password";
+            string query = "SELECT * FROM users WHERE LOWER(username) = @username AND password = @password";
             using (var cmd = new SQLiteCommand(query, conn))
             {
-                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@username", username.ToLower());
                 cmd.Parameters.AddWithValue("@password", password);
                 using (var reader = cmd.ExecuteReader())
                 {
@@ -22,10 +23,9 @@ public class UserRepository
                     {
                         return new User
                         {
-                            UserID = Convert.ToInt32(reader["UserID"]),
-                            Username = reader["Username"].ToString(),
-                            Password = reader["Password"].ToString(),
-                            Role = reader["Role"].ToString()
+                            Username = reader["username"].ToString(),
+                            Password = reader["password"].ToString(),
+                            Role = reader["role"].ToString()
                         };
                     }
                 }
@@ -34,29 +34,34 @@ public class UserRepository
         return null;
     }
 
-    public void AddUserIfNotExists(string username, string password, string role)
+
+
+    public bool AddUserIfNotExists(string username, string password, string role)
     {
-        using (var conn = new SQLiteConnection(_connectionString))
+        using (var conn = new SQLiteConnection("Data Source=unicomtic.db;Version=3;"))
         {
             conn.Open();
-            string checkQuery = "SELECT COUNT(*) FROM Users WHERE Username = @username";
-            using (var checkCmd = new SQLiteCommand(checkQuery, conn))
-            {
-                checkCmd.Parameters.AddWithValue("@username", username);
-                long count = (long)checkCmd.ExecuteScalar();
 
-                if (count == 0)
-                {
-                    string insertQuery = "INSERT INTO Users (Username, Password, Role) VALUES (@username, @password, @role)";
-                    using (var insertCmd = new SQLiteCommand(insertQuery, conn))
-                    {
-                        insertCmd.Parameters.AddWithValue("@username", username);
-                        insertCmd.Parameters.AddWithValue("@password", password);
-                        insertCmd.Parameters.AddWithValue("@role", role);
-                        insertCmd.ExecuteNonQuery();
-                    }
-                }
+            string checkQuery = "SELECT COUNT(*) FROM users WHERE username = @username";
+            using (var cmd = new SQLiteCommand(checkQuery, conn))
+            {
+                cmd.Parameters.AddWithValue("@username", username);
+                long count = (long)cmd.ExecuteScalar();
+                if (count > 0)
+                    return false;
             }
+
+            string insertQuery = "INSERT INTO users (username, password, role) VALUES (@username, @password, @role)";
+            using (var cmd = new SQLiteCommand(insertQuery, conn))
+            {
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
+                cmd.Parameters.AddWithValue("@role", role);
+                cmd.ExecuteNonQuery();
+            }
+
+            return true;
         }
     }
+
 }

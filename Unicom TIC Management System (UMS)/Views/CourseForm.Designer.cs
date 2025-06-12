@@ -57,12 +57,13 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             this.dgvCourse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCourse.Location = new System.Drawing.Point(127, 198);
-            this.dgvCourse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCourse.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCourse.Name = "dgvCourse";
             this.dgvCourse.RowHeadersWidth = 51;
             this.dgvCourse.Size = new System.Drawing.Size(335, 165);
             this.dgvCourse.TabIndex = 1;
             this.dgvCourse.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCourse_CellClick);
+            this.dgvCourse.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCourse_RowHeaderMouseClick);
             this.dgvCourse.DoubleClick += new System.EventHandler(this.CourseForm_Load);
             // 
             // btnUpdate
@@ -101,7 +102,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // txtCourseName
             // 
             this.txtCourseName.Location = new System.Drawing.Point(243, 75);
-            this.txtCourseName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCourseName.Margin = new System.Windows.Forms.Padding(4);
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.Size = new System.Drawing.Size(217, 22);
             this.txtCourseName.TabIndex = 5;
@@ -112,7 +113,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(801, 37);
             this.panel1.TabIndex = 6;
