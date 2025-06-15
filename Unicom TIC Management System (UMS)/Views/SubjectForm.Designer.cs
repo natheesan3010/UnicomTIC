@@ -58,7 +58,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(35, 20);
+            this.label2.Location = new System.Drawing.Point(70, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 17);
             this.label2.TabIndex = 8;
@@ -69,7 +69,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(35, 60);
+            this.label3.Location = new System.Drawing.Point(70, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 17);
             this.label3.TabIndex = 9;
@@ -77,24 +77,24 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             // txtSubjectName
             // 
-            this.txtSubjectName.Location = new System.Drawing.Point(179, 13);
+            this.txtSubjectName.Location = new System.Drawing.Point(214, 19);
             this.txtSubjectName.Name = "txtSubjectName";
-            this.txtSubjectName.Size = new System.Drawing.Size(217, 22);
+            this.txtSubjectName.Size = new System.Drawing.Size(250, 22);
             this.txtSubjectName.TabIndex = 10;
             // 
             // cmbCourses
             // 
             this.cmbCourses.FormattingEnabled = true;
-            this.cmbCourses.Location = new System.Drawing.Point(179, 53);
+            this.cmbCourses.Location = new System.Drawing.Point(214, 59);
             this.cmbCourses.Name = "cmbCourses";
-            this.cmbCourses.Size = new System.Drawing.Size(217, 24);
+            this.cmbCourses.Size = new System.Drawing.Size(250, 24);
             this.cmbCourses.TabIndex = 11;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(311, 96);
+            this.btnAdd.Location = new System.Drawing.Point(346, 102);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(85, 28);
+            this.btnAdd.Size = new System.Drawing.Size(118, 28);
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -102,9 +102,9 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(179, 96);
+            this.btnUpdate.Location = new System.Drawing.Point(214, 102);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(85, 28);
+            this.btnUpdate.Size = new System.Drawing.Size(118, 28);
             this.btnUpdate.TabIndex = 13;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -112,9 +112,9 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(38, 98);
+            this.btnDelete.Location = new System.Drawing.Point(73, 104);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(85, 28);
+            this.btnDelete.Size = new System.Drawing.Size(118, 28);
             this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -124,11 +124,11 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             this.dgvsubject.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvsubject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvsubject.Location = new System.Drawing.Point(38, 138);
+            this.dgvsubject.Location = new System.Drawing.Point(23, 149);
             this.dgvsubject.Name = "dgvsubject";
             this.dgvsubject.RowHeadersWidth = 100;
             this.dgvsubject.RowTemplate.Height = 24;
-            this.dgvsubject.Size = new System.Drawing.Size(358, 112);
+            this.dgvsubject.Size = new System.Drawing.Size(513, 173);
             this.dgvsubject.TabIndex = 15;
             this.dgvsubject.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvsubject_CellContentClick);
             this.dgvsubject.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvsubject_RowHeaderMouseClick);
@@ -146,12 +146,13 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(31, 51);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(423, 276);
+            this.panel2.Size = new System.Drawing.Size(560, 339);
             this.panel2.TabIndex = 16;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // SubjectForm
             // 
-            this.ClientSize = new System.Drawing.Size(514, 339);
+            this.ClientSize = new System.Drawing.Size(619, 387);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "SubjectForm";

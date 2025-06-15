@@ -19,7 +19,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
         private void btnExams_Click(object sender, EventArgs e)
         {
-
+            LoadForm(new ExamForm());
         }
 
         private void LoadForm(Form form)
@@ -43,16 +43,33 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             LoadForm(new WelcomeForm());
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            this.Hide(); 
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-        }
-
         private void btnStudents_Click(object sender, EventArgs e)
         {
             LoadForm(new StudentForm());
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LoadForm(new RoomForm());
+
+        }
+
+        private void btnMarks_Click(object sender, EventArgs e)
+        {
+            LoadForm(new MarkForm());
+        }
+
+        private void btnTimetables_Click(object sender, EventArgs e)
+        {
+            LoadForm(new TimetableForm());
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+        }
+
     }
 }

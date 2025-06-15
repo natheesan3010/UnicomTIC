@@ -1,6 +1,6 @@
 ﻿namespace Unicom_TIC_Management_System__UMS_.Views
 {
-    partial class Newaccount
+    partial class NewaccountForm
     {
         /// <summary>
         /// Required designer variable.

@@ -71,27 +71,15 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
        
 
-        
-        private void panelMain_Paint(object sender, PaintEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            
+            new NewaccountForm().Show();
+            this.Hide();
         }
 
-        private void panelMain_Paint_1(object sender, PaintEventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+            LoadForm(new RoomForm());
         }
-
-        private void MainForm_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblHeading_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }

@@ -39,6 +39,8 @@
             this.btnMarks = new System.Windows.Forms.Button();
             this.btnTimetables = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelHeader.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,22 +65,20 @@
             this.lblHeading.TabIndex = 0;
             this.lblHeading.Text = "UNICOM TIC MANAGEMENT SYSTEM";
             this.lblHeading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblHeading.Click += new System.EventHandler(this.lblHeading_Click);
             // 
             // panelMain
             // 
             this.panelMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMain.Location = new System.Drawing.Point(155, 58);
+            this.panelMain.Location = new System.Drawing.Point(155, 61);
             this.panelMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(637, 382);
+            this.panelMain.Size = new System.Drawing.Size(637, 434);
             this.panelMain.TabIndex = 0;
-            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // btnStudents
             // 
             this.btnStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStudents.Location = new System.Drawing.Point(0, 87);
+            this.btnStudents.Location = new System.Drawing.Point(0, 97);
             this.btnStudents.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStudents.Name = "btnStudents";
             this.btnStudents.Size = new System.Drawing.Size(149, 39);
@@ -90,7 +90,7 @@
             // btnCourses
             // 
             this.btnCourses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCourses.Location = new System.Drawing.Point(0, 141);
+            this.btnCourses.Location = new System.Drawing.Point(0, 146);
             this.btnCourses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCourses.Name = "btnCourses";
             this.btnCourses.Size = new System.Drawing.Size(149, 39);
@@ -102,7 +102,7 @@
             // btnSubjects
             // 
             this.btnSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubjects.Location = new System.Drawing.Point(0, 198);
+            this.btnSubjects.Location = new System.Drawing.Point(0, 199);
             this.btnSubjects.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSubjects.Name = "btnSubjects";
             this.btnSubjects.Size = new System.Drawing.Size(149, 39);
@@ -114,7 +114,7 @@
             // btnExams
             // 
             this.btnExams.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExams.Location = new System.Drawing.Point(0, 250);
+            this.btnExams.Location = new System.Drawing.Point(0, 251);
             this.btnExams.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExams.Name = "btnExams";
             this.btnExams.Size = new System.Drawing.Size(149, 39);
@@ -126,7 +126,7 @@
             // btnMarks
             // 
             this.btnMarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMarks.Location = new System.Drawing.Point(0, 302);
+            this.btnMarks.Location = new System.Drawing.Point(0, 303);
             this.btnMarks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMarks.Name = "btnMarks";
             this.btnMarks.Size = new System.Drawing.Size(149, 39);
@@ -138,7 +138,7 @@
             // btnTimetables
             // 
             this.btnTimetables.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimetables.Location = new System.Drawing.Point(-3, 350);
+            this.btnTimetables.Location = new System.Drawing.Point(-3, 402);
             this.btnTimetables.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimetables.Name = "btnTimetables";
             this.btnTimetables.Size = new System.Drawing.Size(149, 47);
@@ -150,7 +150,7 @@
             // btnLogout
             // 
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(-3, 404);
+            this.btnLogout.Location = new System.Drawing.Point(-3, 456);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(149, 39);
@@ -159,11 +159,37 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1, 50);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(149, 39);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "New Account\r\n";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(-3, 348);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(149, 47);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Manage Rooms";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(802, 503);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnStudents);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.btnCourses);
@@ -181,5 +207,8 @@
             this.ResumeLayout(false);
 
         }
+
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

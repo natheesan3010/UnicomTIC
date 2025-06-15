@@ -46,7 +46,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(310, 80);
+            this.btnAdd.Location = new System.Drawing.Point(352, 80);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
@@ -62,7 +62,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.dgvCourse.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCourse.Name = "dgvCourse";
             this.dgvCourse.RowHeadersWidth = 51;
-            this.dgvCourse.Size = new System.Drawing.Size(335, 165);
+            this.dgvCourse.Size = new System.Drawing.Size(421, 165);
             this.dgvCourse.TabIndex = 1;
             this.dgvCourse.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCourse_CellClick);
             this.dgvCourse.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCourse_RowHeaderMouseClick);
@@ -70,7 +70,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(174, 80);
+            this.btnUpdate.Location = new System.Drawing.Point(216, 80);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(99, 23);
@@ -81,7 +81,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(50, 80);
+            this.btnDelete.Location = new System.Drawing.Point(92, 80);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(91, 23);
@@ -94,7 +94,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             this.lblCourseName.AutoSize = true;
             this.lblCourseName.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCourseName.Location = new System.Drawing.Point(46, 19);
+            this.lblCourseName.Location = new System.Drawing.Point(88, 19);
             this.lblCourseName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCourseName.Name = "lblCourseName";
             this.lblCourseName.Size = new System.Drawing.Size(108, 19);
@@ -103,7 +103,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             // txtCourseName
             // 
-            this.txtCourseName.Location = new System.Drawing.Point(166, 16);
+            this.txtCourseName.Location = new System.Drawing.Point(208, 16);
             this.txtCourseName.Margin = new System.Windows.Forms.Padding(4);
             this.txtCourseName.Name = "txtCourseName";
             this.txtCourseName.Size = new System.Drawing.Size(217, 22);
@@ -114,7 +114,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-1, 2);
+            this.panel1.Location = new System.Drawing.Point(-11, -1);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(801, 37);
@@ -143,14 +143,14 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Location = new System.Drawing.Point(77, 59);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(428, 333);
+            this.panel2.Size = new System.Drawing.Size(507, 333);
             this.panel2.TabIndex = 7;
             // 
             // CourseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 417);
+            this.ClientSize = new System.Drawing.Size(619, 387);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

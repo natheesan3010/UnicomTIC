@@ -67,7 +67,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(308, 118);
+            this.btnAdd.Location = new System.Drawing.Point(325, 118);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(95, 33);
             this.btnAdd.TabIndex = 10;
@@ -77,7 +77,7 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(171, 118);
+            this.btnUpdate.Location = new System.Drawing.Point(188, 118);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(95, 33);
             this.btnUpdate.TabIndex = 11;
@@ -87,7 +87,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(35, 118);
+            this.btnDelete.Location = new System.Drawing.Point(52, 118);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(95, 33);
             this.btnDelete.TabIndex = 12;
@@ -98,11 +98,11 @@
             // examGrid
             // 
             this.examGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.examGrid.Location = new System.Drawing.Point(35, 172);
+            this.examGrid.Location = new System.Drawing.Point(29, 170);
             this.examGrid.Name = "examGrid";
             this.examGrid.RowHeadersWidth = 51;
             this.examGrid.RowTemplate.Height = 24;
-            this.examGrid.Size = new System.Drawing.Size(368, 150);
+            this.examGrid.Size = new System.Drawing.Size(444, 150);
             this.examGrid.TabIndex = 13;
             this.examGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.examGrid_CellClick);
             // 
@@ -110,7 +110,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 21);
+            this.label2.Location = new System.Drawing.Point(49, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 17);
             this.label2.TabIndex = 14;
@@ -120,7 +120,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(32, 70);
+            this.label3.Location = new System.Drawing.Point(49, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 17);
             this.label3.TabIndex = 15;
@@ -128,7 +128,7 @@
             // 
             // texam
             // 
-            this.texam.Location = new System.Drawing.Point(171, 21);
+            this.texam.Location = new System.Drawing.Point(188, 21);
             this.texam.Name = "texam";
             this.texam.Size = new System.Drawing.Size(232, 22);
             this.texam.TabIndex = 16;
@@ -136,7 +136,7 @@
             // cmbSubject
             // 
             this.cmbSubject.FormattingEnabled = true;
-            this.cmbSubject.Location = new System.Drawing.Point(171, 67);
+            this.cmbSubject.Location = new System.Drawing.Point(188, 67);
             this.cmbSubject.Name = "cmbSubject";
             this.cmbSubject.Size = new System.Drawing.Size(232, 24);
             this.cmbSubject.TabIndex = 17;
@@ -152,16 +152,16 @@
             this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Controls.Add(this.btnUpdate);
             this.panel2.Controls.Add(this.btnAdd);
-            this.panel2.Location = new System.Drawing.Point(114, 53);
+            this.panel2.Location = new System.Drawing.Point(50, 44);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(438, 348);
+            this.panel2.Size = new System.Drawing.Size(518, 339);
             this.panel2.TabIndex = 18;
             // 
             // ExamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 417);
+            this.ClientSize = new System.Drawing.Size(619, 387);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "ExamForm";

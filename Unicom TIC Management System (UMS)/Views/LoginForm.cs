@@ -25,11 +25,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             controller.HandleLogin(username, password);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            new Newaccount().Show();
-            this.Hide();
-        }
+        
 
         // These are helper methods to allow the controller to manipulate the form
         public void ShowError(string message)

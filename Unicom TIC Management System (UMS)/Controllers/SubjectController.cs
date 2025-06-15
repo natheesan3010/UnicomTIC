@@ -9,35 +9,7 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
     {
         private string connectionString = "Data Source=unicomtic.db;Version=3;";
 
-        public List<Subject> GetAllSubjects()
-        {
-            var subjects = new List<Subject>();
 
-            using (var con = new SQLiteConnection(connectionString))
-            {
-                con.Open();
-                string query = @"SELECT s.SubjectID, s.SubjectName, c.CourseName, s.CourseID 
-                                 FROM Subjects s
-                                 INNER JOIN Courses c ON s.CourseID = c.CourseID";
-
-                using (var cmd = new SQLiteCommand(query, con))
-                using (var reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        subjects.Add(new Subject
-                        {
-                            SubjectID = reader.GetInt32(0),
-                            SubjectName = reader.GetString(1),
-                            CourseName = reader.GetString(2),
-                            CourseID = reader.GetInt32(3)
-                        });
-                    }
-                }
-            }
-
-            return subjects;
-        }
 
         public void AddSubject(Subject subject)
         {
@@ -87,5 +59,20 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
                 return dt;
             }
         }
+
+        public DataTable GetAllSubjects()
+        {
+            using (SQLiteConnection con = new SQLiteConnection(connectionString))
+            {
+                con.Open();
+                string query = "SELECT SubjectID, SubjectName, CourseID FROM Subjects";
+                SQLiteDataAdapter da = new SQLiteDataAdapter(query, con);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
     }
 }
+

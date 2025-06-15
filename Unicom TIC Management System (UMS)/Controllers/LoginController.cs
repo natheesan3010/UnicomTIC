@@ -17,8 +17,8 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
 
             // Optional: insert sample users (first-time run)
             repo.AddUserIfNotExists("admin", "admin123", "admin");
-            repo.AddUserIfNotExists("teacher1", "teach123", "teacher");
-            repo.AddUserIfNotExists("student1", "stud123", "student");
+            repo.AddUserIfNotExists("teacher1", "teacher123", "teacher");
+            repo.AddUserIfNotExists("student1", "student123", "student");
         }
 
         public void HandleLogin(string username, string password)

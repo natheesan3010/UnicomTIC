@@ -115,5 +115,9 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
