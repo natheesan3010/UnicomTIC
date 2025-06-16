@@ -68,7 +68,7 @@
             // 
             this.cmbSubject.FormattingEnabled = true;
             this.cmbSubject.Location = new System.Drawing.Point(174, 10);
-            this.cmbSubject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbSubject.Margin = new System.Windows.Forms.Padding(2);
             this.cmbSubject.Name = "cmbSubject";
             this.cmbSubject.Size = new System.Drawing.Size(149, 21);
             this.cmbSubject.TabIndex = 9;
@@ -77,7 +77,7 @@
             // 
             this.cmbTimeSlot.FormattingEnabled = true;
             this.cmbTimeSlot.Location = new System.Drawing.Point(174, 41);
-            this.cmbTimeSlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbTimeSlot.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTimeSlot.Name = "cmbTimeSlot";
             this.cmbTimeSlot.Size = new System.Drawing.Size(149, 21);
             this.cmbTimeSlot.TabIndex = 10;
@@ -86,7 +86,7 @@
             // 
             this.cmbRoom.FormattingEnabled = true;
             this.cmbRoom.Location = new System.Drawing.Point(174, 73);
-            this.cmbRoom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbRoom.Margin = new System.Windows.Forms.Padding(2);
             this.cmbRoom.Name = "cmbRoom";
             this.cmbRoom.Size = new System.Drawing.Size(149, 21);
             this.cmbRoom.TabIndex = 11;
@@ -95,7 +95,7 @@
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(224, 107);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(130, 27);
             this.btnAdd.TabIndex = 12;
@@ -106,7 +106,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Location = new System.Drawing.Point(73, 107);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(130, 27);
             this.btnUpdate.TabIndex = 13;
@@ -117,7 +117,7 @@
             // 
             this.gridTimetable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridTimetable.Location = new System.Drawing.Point(12, 149);
-            this.gridTimetable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gridTimetable.Margin = new System.Windows.Forms.Padding(2);
             this.gridTimetable.Name = "gridTimetable";
             this.gridTimetable.RowHeadersWidth = 51;
             this.gridTimetable.RowTemplate.Height = 24;
@@ -167,9 +167,9 @@
             this.panel2.Controls.Add(this.cmbTimeSlot);
             this.panel2.Controls.Add(this.cmbSubject);
             this.panel2.Location = new System.Drawing.Point(8, 41);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(455, 275);
+            this.panel2.Size = new System.Drawing.Size(445, 275);
             this.panel2.TabIndex = 18;
             // 
             // TimetableForm
@@ -179,7 +179,7 @@
             this.ClientSize = new System.Drawing.Size(464, 314);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TimetableForm";
             this.Text = "TimetableForm";
             this.Load += new System.EventHandler(this.TimetableForm_Load);
