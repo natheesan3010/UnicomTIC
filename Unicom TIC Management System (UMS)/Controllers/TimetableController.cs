@@ -20,7 +20,7 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
             using (SQLiteConnection con = new SQLiteConnection(connectionString))
             {
                 con.Open();
-                // foreign key enable
+                
                 using (var cmd = new SQLiteCommand("PRAGMA foreign_keys = ON;", con))
                 {
                     cmd.ExecuteNonQuery();
