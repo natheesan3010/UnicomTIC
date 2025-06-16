@@ -50,20 +50,18 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-57, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(-43, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(801, 37);
+            this.panel1.Size = new System.Drawing.Size(601, 30);
             this.panel1.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(255, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(191, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 23);
+            this.label1.Size = new System.Drawing.Size(201, 19);
             this.label1.TabIndex = 7;
             this.label1.Text = "MARKS   MANAGEMENT";
             // 
@@ -71,9 +69,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(102, 23);
+            this.label2.Location = new System.Drawing.Point(76, 19);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 19);
+            this.label2.Size = new System.Drawing.Size(72, 16);
             this.label2.TabIndex = 9;
             this.label2.Text = " Subject ID";
             // 
@@ -81,17 +80,19 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(102, 65);
+            this.label3.Location = new System.Drawing.Point(76, 53);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 19);
+            this.label3.Size = new System.Drawing.Size(76, 16);
             this.label3.TabIndex = 10;
             this.label3.Text = "Exam Name";
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(374, 142);
+            this.btnAdd.Location = new System.Drawing.Point(280, 123);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(112, 37);
+            this.btnAdd.Size = new System.Drawing.Size(84, 30);
             this.btnAdd.TabIndex = 11;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -99,9 +100,10 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(223, 142);
+            this.btnUpdate.Location = new System.Drawing.Point(167, 123);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(112, 37);
+            this.btnUpdate.Size = new System.Drawing.Size(84, 30);
             this.btnUpdate.TabIndex = 12;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -109,9 +111,10 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(76, 142);
+            this.btnDelete.Location = new System.Drawing.Point(57, 123);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(112, 37);
+            this.btnDelete.Size = new System.Drawing.Size(84, 30);
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -120,26 +123,29 @@
             // dataGridViewMarks
             // 
             this.dataGridViewMarks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMarks.Location = new System.Drawing.Point(22, 191);
+            this.dataGridViewMarks.Location = new System.Drawing.Point(13, 169);
+            this.dataGridViewMarks.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewMarks.Name = "dataGridViewMarks";
             this.dataGridViewMarks.RowHeadersWidth = 51;
             this.dataGridViewMarks.RowTemplate.Height = 24;
-            this.dataGridViewMarks.Size = new System.Drawing.Size(560, 148);
+            this.dataGridViewMarks.Size = new System.Drawing.Size(420, 99);
             this.dataGridViewMarks.TabIndex = 15;
             // 
             // textBoxScore
             // 
-            this.textBoxScore.Location = new System.Drawing.Point(269, 106);
+            this.textBoxScore.Location = new System.Drawing.Point(202, 86);
+            this.textBoxScore.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxScore.Name = "textBoxScore";
-            this.textBoxScore.Size = new System.Drawing.Size(188, 22);
+            this.textBoxScore.Size = new System.Drawing.Size(142, 20);
             this.textBoxScore.TabIndex = 16;
             // 
             // comboBoxExam
             // 
             this.comboBoxExam.FormattingEnabled = true;
-            this.comboBoxExam.Location = new System.Drawing.Point(248, 64);
+            this.comboBoxExam.Location = new System.Drawing.Point(186, 52);
+            this.comboBoxExam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxExam.Name = "comboBoxExam";
-            this.comboBoxExam.Size = new System.Drawing.Size(209, 24);
+            this.comboBoxExam.Size = new System.Drawing.Size(158, 21);
             this.comboBoxExam.TabIndex = 17;
             // 
             // panel2
@@ -155,37 +161,40 @@
             this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(-4, 41);
+            this.panel2.Location = new System.Drawing.Point(11, 44);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(601, 327);
+            this.panel2.Size = new System.Drawing.Size(461, 298);
             this.panel2.TabIndex = 18;
             // 
             // comboBoxStudent
             // 
             this.comboBoxStudent.FormattingEnabled = true;
-            this.comboBoxStudent.Location = new System.Drawing.Point(248, 22);
+            this.comboBoxStudent.Location = new System.Drawing.Point(186, 18);
+            this.comboBoxStudent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxStudent.Name = "comboBoxStudent";
-            this.comboBoxStudent.Size = new System.Drawing.Size(209, 24);
+            this.comboBoxStudent.Size = new System.Drawing.Size(158, 21);
             this.comboBoxStudent.TabIndex = 19;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(102, 109);
+            this.label4.Location = new System.Drawing.Point(76, 89);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 19);
+            this.label4.Size = new System.Drawing.Size(121, 16);
             this.label4.TabIndex = 18;
             this.label4.Text = "Enter Score (0-100)";
             // 
             // MarkForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 387);
+            this.ClientSize = new System.Drawing.Size(499, 371);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MarkForm";
             this.Text = "MarkForm";
             this.Load += new System.EventHandler(this.MarkForm_Load);

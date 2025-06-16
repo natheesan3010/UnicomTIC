@@ -19,7 +19,8 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
         private void StudentForm_Load(object sender, EventArgs e)
         {
-            LoadStudentData();
+            LoadCourses();         // Load courses into the ComboBox
+            LoadStudentData();     // Load students into the DataGridView
         }
 
         private void StudentForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -29,17 +30,18 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
         private void btn_add_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(tname.Text) || string.IsNullOrWhiteSpace(tnic.Text) || cmbcourse.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please enter Name, NIC, and select a Course.");
+                return;
+            }
+
             var student = new Student
             {
                 StudentName = tname.Text.Trim(),
-                NIC_NO = tnic.Text.Trim()
+                NIC_NO = tnic.Text.Trim(),
+                CourseID = Convert.ToInt32(cmbcourse.SelectedValue)
             };
-
-            if (string.IsNullOrWhiteSpace(student.StudentName) || string.IsNullOrWhiteSpace(student.NIC_NO))
-            {
-                MessageBox.Show("Name மற்றும் NIC-ஐ உள்ளிடவும்.");
-                return;
-            }
 
             controller.AddStudent(student);
             ClearInputs();
@@ -50,7 +52,13 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         {
             if (selectedStudentId == -1)
             {
-                MessageBox.Show("முதலில் ஒரு மாணவரைத் தேர்ந்தெடுக்கவும்.");
+                MessageBox.Show("Please select a student first.");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(tname.Text) || string.IsNullOrWhiteSpace(tnic.Text) || cmbcourse.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please enter Name, NIC, and select a Course.");
                 return;
             }
 
@@ -58,7 +66,8 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             {
                 StudentID = selectedStudentId,
                 StudentName = tname.Text.Trim(),
-                NIC_NO = tnic.Text.Trim()
+                NIC_NO = tnic.Text.Trim(),
+                CourseID = Convert.ToInt32(cmbcourse.SelectedValue)
             };
 
             controller.UpdateStudent(student);
@@ -70,7 +79,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         {
             if (selectedStudentId == -1)
             {
-                MessageBox.Show("முதலில் ஒரு மாணவரைத் தேர்ந்தெடுக்கவும்.");
+                MessageBox.Show("Please select a student first.");
                 return;
             }
 
@@ -87,6 +96,12 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             selectedStudentId = Convert.ToInt32(row.Cells["StudentID"].Value);
             tname.Text = row.Cells["StudentName"].Value.ToString();
             tnic.Text = row.Cells["NIC"].Value.ToString();
+
+            // Set selected course in combo box
+            if (row.Cells["CourseID"].Value != DBNull.Value)
+            {
+                cmbcourse.SelectedValue = Convert.ToInt32(row.Cells["CourseID"].Value);
+            }
         }
 
         private void LoadStudentData()
@@ -94,11 +109,31 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             student_data.DataSource = controller.GetAllStudents();
         }
 
+        private void LoadCourses()
+        {
+            DataTable dt = controller.GetAllCourses();
+            cmbcourse.DisplayMember = "CourseName";
+            cmbcourse.ValueMember = "CourseID";
+            cmbcourse.DataSource = dt;
+            cmbcourse.SelectedIndex = -1; // No course selected initially
+        }
+
         private void ClearInputs()
         {
             tname.Clear();
             tnic.Clear();
+            cmbcourse.SelectedIndex = -1;
             selectedStudentId = -1;
+        }
+
+        private void cmbcourse_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Optional: logic when a course is selected
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            // Optional: logic for filtering/searching students
         }
     }
 }

@@ -166,17 +166,17 @@
             this.panel2.Controls.Add(this.cmbRoom);
             this.panel2.Controls.Add(this.cmbTimeSlot);
             this.panel2.Controls.Add(this.cmbSubject);
-            this.panel2.Location = new System.Drawing.Point(8, 41);
+            this.panel2.Location = new System.Drawing.Point(13, 52);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(445, 275);
+            this.panel2.Size = new System.Drawing.Size(450, 284);
             this.panel2.TabIndex = 18;
             // 
             // TimetableForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 314);
+            this.ClientSize = new System.Drawing.Size(499, 371);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);

@@ -11,6 +11,8 @@ namespace Unicom_TIC_Management_System__UMS_.Models
         public int StudentID { get; set; }
         public string StudentName { get; set; }
         public string NIC_NO { get; set; }
-        
+        public int CourseID { get; set; }
+
+
     }
 }

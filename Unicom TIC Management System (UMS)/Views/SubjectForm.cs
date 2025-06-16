@@ -110,14 +110,5 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             selectedSubjectId = -1;
         }
 
-        private void dgvsubject_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

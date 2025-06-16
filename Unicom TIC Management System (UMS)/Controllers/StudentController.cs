@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SQLite;
 using System.IO;
 using Unicom_TIC_Management_System__UMS_.Models;
+using UnicomTICManagementSystem.Repositories;
 
 namespace Unicom_TIC_Management_System__UMS_.Controllers
 {
@@ -56,15 +57,25 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
             }
         }
 
+        public DataTable GetAllCourses()
+        {
+            var dt = new DataTable();
+            using (var conn = DatabaseManager.GetConnection())
+            {
+                conn.Open();
+                var cmd = new SQLiteCommand("SELECT CourseID, CourseName FROM Courses", conn);
+                dt.Load(cmd.ExecuteReader());
+            }
+            return dt;
+        }
         public DataTable GetAllStudents()
         {
-            string sql = "SELECT StudentID, StudentName, NIC FROM Students";
-            using (var da = new SQLiteDataAdapter(sql, _conn))
-            {
-                var dt = new DataTable();
-                da.Fill(dt);
-                return dt;
-            }
+            var dt = new DataTable();
+            var cmd = new SQLiteCommand("SELECT * FROM Students", _conn);
+            var adapter = new SQLiteDataAdapter(cmd);
+            adapter.Fill(dt);
+            return dt;
         }
+
     }
 }
