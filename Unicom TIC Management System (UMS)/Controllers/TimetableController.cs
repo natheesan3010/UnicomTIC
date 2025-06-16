@@ -40,21 +40,28 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
 
         public static void AddTimetable(Timetable timetable)
         {
-            using (var pragmaCmd = new SQLiteCommand("PRAGMA foreign_keys = ON;", conn))
+            using (var con = new SQLiteConnection(connectionString))
             {
-                pragmaCmd.ExecuteNonQuery();
-            }
+                con.Open();
 
-            string query = "...";
-            using (var cmd = new SQLiteCommand(query, conn))
-            {
-                cmd.Parameters.AddWithValue("@sid", timetable.SubjectID);
-                cmd.Parameters.AddWithValue("@slot", timetable.TimeSlot);
-                cmd.Parameters.AddWithValue("@rid", timetable.RoomID);
-                cmd.ExecuteNonQuery();
-            }
+                // foreign key enable
+                using (var pragmaCmd = new SQLiteCommand("PRAGMA foreign_keys = ON;", con))
+                {
+                    pragmaCmd.ExecuteNonQuery();
+                }
 
+                string query = @"INSERT INTO Timetables (SubjectID, TimeSlot, RoomID) 
+                         VALUES (@sid, @slot, @rid)";
+                using (var cmd = new SQLiteCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@sid", timetable.SubjectID);
+                    cmd.Parameters.AddWithValue("@slot", timetable.TimeSlot);
+                    cmd.Parameters.AddWithValue("@rid", timetable.RoomID);
+                    cmd.ExecuteNonQuery();
+                }
+            }
         }
+
 
 
         public static void UpdateTimetable(Timetable timetable)

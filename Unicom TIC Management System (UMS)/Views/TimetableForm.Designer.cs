@@ -49,53 +49,55 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-127, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(-95, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(812, 46);
+            this.panel1.Size = new System.Drawing.Size(609, 37);
             this.panel1.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(255, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(191, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(299, 23);
+            this.label1.Size = new System.Drawing.Size(243, 19);
             this.label1.TabIndex = 7;
             this.label1.Text = "TIMETABLES   MANAGEMENT";
             // 
             // cmbSubject
             // 
             this.cmbSubject.FormattingEnabled = true;
-            this.cmbSubject.Location = new System.Drawing.Point(218, 12);
+            this.cmbSubject.Location = new System.Drawing.Point(174, 10);
+            this.cmbSubject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbSubject.Name = "cmbSubject";
-            this.cmbSubject.Size = new System.Drawing.Size(197, 24);
+            this.cmbSubject.Size = new System.Drawing.Size(149, 21);
             this.cmbSubject.TabIndex = 9;
             // 
             // cmbTimeSlot
             // 
             this.cmbTimeSlot.FormattingEnabled = true;
-            this.cmbTimeSlot.Location = new System.Drawing.Point(218, 51);
+            this.cmbTimeSlot.Location = new System.Drawing.Point(174, 41);
+            this.cmbTimeSlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbTimeSlot.Name = "cmbTimeSlot";
-            this.cmbTimeSlot.Size = new System.Drawing.Size(197, 24);
+            this.cmbTimeSlot.Size = new System.Drawing.Size(149, 21);
             this.cmbTimeSlot.TabIndex = 10;
             // 
             // cmbRoom
             // 
             this.cmbRoom.FormattingEnabled = true;
-            this.cmbRoom.Location = new System.Drawing.Point(218, 90);
+            this.cmbRoom.Location = new System.Drawing.Point(174, 73);
+            this.cmbRoom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbRoom.Name = "cmbRoom";
-            this.cmbRoom.Size = new System.Drawing.Size(197, 24);
+            this.cmbRoom.Size = new System.Drawing.Size(149, 21);
             this.cmbRoom.TabIndex = 11;
             this.cmbRoom.SelectedIndexChanged += new System.EventHandler(this.cmbRoom_SelectedIndexChanged);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(285, 132);
+            this.btnAdd.Location = new System.Drawing.Point(224, 107);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(174, 33);
+            this.btnAdd.Size = new System.Drawing.Size(130, 27);
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -103,9 +105,10 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(84, 132);
+            this.btnUpdate.Location = new System.Drawing.Point(73, 107);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(174, 33);
+            this.btnUpdate.Size = new System.Drawing.Size(130, 27);
             this.btnUpdate.TabIndex = 13;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -113,37 +116,41 @@
             // gridTimetable
             // 
             this.gridTimetable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridTimetable.Location = new System.Drawing.Point(29, 174);
+            this.gridTimetable.Location = new System.Drawing.Point(12, 149);
+            this.gridTimetable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gridTimetable.Name = "gridTimetable";
             this.gridTimetable.RowHeadersWidth = 51;
             this.gridTimetable.RowTemplate.Height = 24;
-            this.gridTimetable.Size = new System.Drawing.Size(512, 136);
+            this.gridTimetable.Size = new System.Drawing.Size(422, 110);
             this.gridTimetable.TabIndex = 14;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(125, 20);
+            this.label2.Location = new System.Drawing.Point(104, 16);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 16);
+            this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 15;
             this.label2.Text = "Subject";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(125, 59);
+            this.label3.Location = new System.Drawing.Point(104, 48);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 16);
+            this.label3.Size = new System.Drawing.Size(51, 13);
             this.label3.TabIndex = 16;
             this.label3.Text = "Time Slot";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(133, 98);
+            this.label4.Location = new System.Drawing.Point(110, 80);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 16);
+            this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 17;
             this.label4.Text = "Room";
             // 
@@ -159,19 +166,20 @@
             this.panel2.Controls.Add(this.cmbRoom);
             this.panel2.Controls.Add(this.cmbTimeSlot);
             this.panel2.Controls.Add(this.cmbSubject);
-            this.panel2.Location = new System.Drawing.Point(36, 59);
+            this.panel2.Location = new System.Drawing.Point(8, 41);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(546, 326);
+            this.panel2.Size = new System.Drawing.Size(455, 275);
             this.panel2.TabIndex = 18;
             // 
             // TimetableForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(619, 387);
+            this.ClientSize = new System.Drawing.Size(464, 314);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "TimetableForm";
             this.Text = "TimetableForm";
             this.Load += new System.EventHandler(this.TimetableForm_Load);

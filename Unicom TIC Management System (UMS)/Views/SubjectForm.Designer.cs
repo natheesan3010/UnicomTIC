@@ -50,7 +50,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(191, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(271, 23);
+            this.label1.Size = new System.Drawing.Size(220, 19);
             this.label1.TabIndex = 7;
             this.label1.Text = "SUBJECTS   MANAGEMENT";
             // 
@@ -60,7 +60,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.label2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(70, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 17);
+            this.label2.Size = new System.Drawing.Size(98, 15);
             this.label2.TabIndex = 8;
             this.label2.Text = "SUBJECT NAME";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -71,7 +71,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(70, 66);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 17);
+            this.label3.Size = new System.Drawing.Size(94, 15);
             this.label3.TabIndex = 9;
             this.label3.Text = "COURSE NAME";
             // 
@@ -79,7 +79,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             this.txtSubjectName.Location = new System.Drawing.Point(214, 19);
             this.txtSubjectName.Name = "txtSubjectName";
-            this.txtSubjectName.Size = new System.Drawing.Size(250, 22);
+            this.txtSubjectName.Size = new System.Drawing.Size(239, 20);
             this.txtSubjectName.TabIndex = 10;
             // 
             // cmbCourses
@@ -87,7 +87,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.cmbCourses.FormattingEnabled = true;
             this.cmbCourses.Location = new System.Drawing.Point(214, 59);
             this.cmbCourses.Name = "cmbCourses";
-            this.cmbCourses.Size = new System.Drawing.Size(250, 24);
+            this.cmbCourses.Size = new System.Drawing.Size(239, 21);
             this.cmbCourses.TabIndex = 11;
             // 
             // btnAdd
@@ -124,11 +124,11 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             this.dgvsubject.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvsubject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvsubject.Location = new System.Drawing.Point(23, 149);
+            this.dgvsubject.Location = new System.Drawing.Point(37, 139);
             this.dgvsubject.Name = "dgvsubject";
             this.dgvsubject.RowHeadersWidth = 100;
             this.dgvsubject.RowTemplate.Height = 24;
-            this.dgvsubject.Size = new System.Drawing.Size(513, 173);
+            this.dgvsubject.Size = new System.Drawing.Size(467, 173);
             this.dgvsubject.TabIndex = 15;
             this.dgvsubject.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvsubject_CellContentClick);
             this.dgvsubject.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvsubject_RowHeaderMouseClick);
@@ -144,7 +144,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.panel2.Controls.Add(this.txtSubjectName);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(31, 51);
+            this.panel2.Location = new System.Drawing.Point(-2, 51);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(560, 339);
             this.panel2.TabIndex = 16;

@@ -16,11 +16,7 @@ namespace UnicomTICManagementSystem.Repositories
 
         public static void InitializeDatabase()
         {
-            if (!File.Exists(dbFile))
-            {
-                SQLiteConnection.CreateFile(dbFile);
-            }
-
+            
             using (var connection = GetConnection())
             {
                 connection.Open();
@@ -51,7 +47,7 @@ namespace UnicomTICManagementSystem.Repositories
                 CREATE TABLE IF NOT EXISTS Students (
                     StudentID INTEGER PRIMARY KEY AUTOINCREMENT,
                     StudentName TEXT NOT NULL,
-                    NIC INTEGER NOT NULL,
+                    NIC TEXT NOT NULL,
                     CourseID INTEGER,
                     FOREIGN KEY(CourseID) REFERENCES Courses(CourseID)
                 );";
@@ -103,14 +99,10 @@ namespace UnicomTICManagementSystem.Repositories
                     new SQLiteCommand(createTimetablesTable, connection)
                 };
 
-              
-
                 foreach (var cmd in commands)
                 {
                     cmd.ExecuteNonQuery();
                 }
-
-                connection.Close();
             }
         }
     }

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
+using System.Windows.Forms;
 using Unicom_TIC_Management_System__UMS_.Models;
 
 namespace Unicom_TIC_Management_System__UMS_.Controllers
@@ -27,7 +28,7 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
             using (var con = new SQLiteConnection(connectionString))
             {
                 con.Open();
-                string query = "UPDATE Courses SET Name = @name WHERE Id = @id";
+                string query = "UPDATE Courses SET CourseName  = @name WHERE CourseID  = @id";
                 using (var cmd = new SQLiteCommand(query, con))
                 {
                     cmd.Parameters.AddWithValue("@name", name);
@@ -42,7 +43,7 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
             using (var con = new SQLiteConnection(connectionString))
             {
                 con.Open();
-                string query = "DELETE FROM Courses WHERE Id = @id";
+                string query = "DELETE FROM Courses WHERE CourseID  = @id";
                 using (var cmd = new SQLiteCommand(query, con))
                 {
                     cmd.Parameters.AddWithValue("@id", id);

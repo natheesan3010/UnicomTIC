@@ -17,8 +17,22 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         private void RoomForm_Load(object sender, EventArgs e)
         {
             LoadRooms();
-            cmbRoomType.Items.Add("Lab");
-            cmbRoomType.Items.Add("Hall");
+
+            // RoomName combo box
+            cmbRoomName.Items.Clear();
+            cmbRoomName.Items.Add("Lecture Hall");
+            cmbRoomName.Items.Add("MainLab");
+            cmbRoomName.Items.Add("MinLab1");
+            cmbRoomName.Items.Add("MinLab2");
+
+            // RoomType combo box
+            cmbRoomType.Items.Clear();
+            cmbRoomType.Items.Add("AC");
+            cmbRoomType.Items.Add("NON AC");
+
+            // Reset combo box selection
+            cmbRoomName.SelectedIndex = -1;
+            cmbRoomType.SelectedIndex = -1;
         }
 
         private void LoadRooms()
@@ -28,7 +42,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtRoomName.Text) || cmbRoomType.SelectedIndex == -1)
+            if (string.IsNullOrEmpty(cmbRoomName.Text) || cmbRoomType.SelectedIndex == -1)
             {
                 MessageBox.Show("Please fill all fields.");
                 return;
@@ -36,7 +50,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
             Room room = new Room()
             {
-                RoomName = txtRoomName.Text.Trim(),
+                RoomName = cmbRoomName.Text.Trim(),
                 RoomType = cmbRoomType.SelectedItem.ToString()
             };
 
@@ -48,8 +62,13 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
         private void ResetForm()
         {
-            txtRoomName.Clear();
+            cmbRoomName.SelectedIndex = -1;
             cmbRoomType.SelectedIndex = -1;
+        }
+
+        private void cmbRoomType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

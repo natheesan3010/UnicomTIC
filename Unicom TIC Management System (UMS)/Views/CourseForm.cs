@@ -91,10 +91,11 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         {
             if (selectedCourseId == -1)
             {
-                MessageBox.Show("Please Select The Course!.");
+                MessageBox.Show("Please select a course to delete.");
                 return;
             }
 
+            // Delete course using existing open connection
             string query = "DELETE FROM Courses WHERE CourseID = @Id";
             using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
             {
@@ -102,7 +103,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
                 cmd.ExecuteNonQuery();
             }
 
-            // ✅ Check if table is now empty → Reset AutoIncrement
+            // Check if table is empty and reset AUTOINCREMENT
             string countQuery = "SELECT COUNT(*) FROM Courses";
             using (SQLiteCommand countCmd = new SQLiteCommand(countQuery, conn))
             {
@@ -117,11 +118,13 @@ namespace Unicom_TIC_Management_System__UMS_.Views
                 }
             }
 
-            MessageBox.Show("Course Deleted Successfully!");
+            MessageBox.Show("Course deleted successfully!");
             txtCourseName.Clear();
             selectedCourseId = -1;
             LoadCourses();
         }
+
+
 
 
         private void dgvCourse_CellClick(object sender, DataGridViewCellEventArgs e)
