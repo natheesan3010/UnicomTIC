@@ -1,33 +1,24 @@
 ﻿using System;
 using System.Data;
 using System.Data.SQLite;
-using System.IO;
-using Unicom_TIC_Management_System__UMS_.Models;
 using System.Windows.Forms;
+using Unicom_TIC_Management_System__UMS_.Models;
+using Unicom_TIC_Management_System__UMS_.Repositories; // DbCon class path
 
 namespace Unicom_TIC_Management_System__UMS_.Controllers
 {
     public class ExamController
     {
-        private readonly string _connectionString;
-
-        public ExamController()
-        {
-            string dbPath = Path.Combine(Application.StartupPath, "unicomtic.db");
-            _connectionString = $"Data Source={dbPath};Version=3;";
-        }
-
         public DataTable GetAllExams()
         {
-            using (var conn = new SQLiteConnection(_connectionString))
+            using (var conn = DbCon.GetConnection())
             {
-                conn.Open();
                 var dt = new DataTable();
                 string sql = @"
-            SELECT e.ExamID, e.ExamName, s.SubjectName
-            FROM Exams e
-            INNER JOIN Subjects s ON e.SubjectID = s.SubjectID
-        ";
+                    SELECT e.ExamID, e.ExamName, s.SubjectName
+                    FROM Exams e
+                    INNER JOIN Subjects s ON e.SubjectID = s.SubjectID";
+
                 using (var cmd = new SQLiteCommand(sql, conn))
                 using (var da = new SQLiteDataAdapter(cmd))
                 {
@@ -37,14 +28,12 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
             }
         }
 
-
         public void AddExam(Exam exam)
         {
             try
             {
-                using (var conn = new SQLiteConnection(_connectionString))
+                using (var conn = DbCon.GetConnection())
                 {
-                    conn.Open();
                     string sql = "INSERT INTO Exams (SubjectID, ExamName) VALUES (@SubjectID, @ExamName)";
                     using (var cmd = new SQLiteCommand(sql, conn))
                     {
@@ -64,9 +53,8 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
         {
             try
             {
-                using (var conn = new SQLiteConnection(_connectionString))
+                using (var conn = DbCon.GetConnection())
                 {
-                    conn.Open();
                     string sql = "UPDATE Exams SET SubjectID = @SubjectID, ExamName = @ExamName WHERE ExamID = @ExamID";
                     using (var cmd = new SQLiteCommand(sql, conn))
                     {
@@ -87,9 +75,8 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
         {
             try
             {
-                using (var conn = new SQLiteConnection(_connectionString))
+                using (var conn = DbCon.GetConnection())
                 {
-                    conn.Open();
                     string sql = "DELETE FROM Exams WHERE ExamID = @ExamID";
                     using (var cmd = new SQLiteCommand(sql, conn))
                     {
@@ -108,9 +95,8 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
         {
             try
             {
-                using (var conn = new SQLiteConnection(_connectionString))
+                using (var conn = DbCon.GetConnection())
                 {
-                    conn.Open();
                     var dt = new DataTable();
                     string sql = "SELECT SubjectID, SubjectName FROM Subjects";
                     using (var cmd = new SQLiteCommand(sql, conn))

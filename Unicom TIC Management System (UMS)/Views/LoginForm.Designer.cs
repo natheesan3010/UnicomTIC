@@ -99,6 +99,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(185, 22);
             this.txtPassword.TabIndex = 5;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // panel1
             // 

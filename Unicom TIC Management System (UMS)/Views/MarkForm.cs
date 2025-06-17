@@ -2,6 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 using Unicom_TIC_Management_System__UMS_.Controllers;
+using Unicom_TIC_Management_System__UMS_.Repositories;
 
 namespace Unicom_TIC_Management_System__UMS_.Views
 {
@@ -49,12 +50,12 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
             if (!int.TryParse(textBoxScore.Text, out score) || score < 0 || score > 100)
             {
-                MessageBox.Show("Score must be between 0 and 100.");
+                MessageHelper.ShowInfo("Score must be between 0 and 100.");
                 return;
             }
 
             controller.AddMark(studentId, examId, score);
-            MessageBox.Show("Mark added successfully.");
+            MessageHelper.ShowConfirm("Mark added successfully.");
             LoadMarks();
         }
 
@@ -62,7 +63,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         {
             if (dataGridViewMarks.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Please select a mark to update.");
+                MessageHelper.ShowSuccess("Please select a mark to update.");
                 return;
             }
 
@@ -73,12 +74,12 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
             if (!int.TryParse(textBoxScore.Text, out score) || score < 0 || score > 100)
             {
-                MessageBox.Show("Score must be between 0 and 100.");
+                MessageHelper.ShowInfo("Score must be between 0 and 100.");
                 return;
             }
 
             controller.UpdateMark(markId, studentId, examId, score);
-            MessageBox.Show("Mark updated successfully.");
+            MessageHelper.ShowSuccess("Mark updated successfully.");
             LoadMarks();
         }
 
@@ -86,7 +87,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         {
             if (dataGridViewMarks.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Please select a mark to delete.");
+                MessageHelper.ShowConfirm("Please select a mark to delete.");
                 return;
             }
 
@@ -95,7 +96,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             if (result == DialogResult.Yes)
             {
                 controller.DeleteMark(markId);
-                MessageBox.Show("Mark deleted successfully.");
+                MessageHelper.ShowSuccess("Mark deleted successfully.");
                 LoadMarks(); 
             }
         }

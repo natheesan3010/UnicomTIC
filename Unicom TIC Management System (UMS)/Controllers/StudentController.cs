@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
 using System.IO;
 using Unicom_TIC_Management_System__UMS_.Models;
-using UnicomTICManagementSystem.Repositories;
 
 namespace Unicom_TIC_Management_System__UMS_.Controllers
 {
@@ -26,22 +24,24 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
 
         public void AddStudent(Student student)
         {
-            string sql = "INSERT INTO Students (StudentName, NIC) VALUES (@StudentName, @NIC)";
+            string sql = "INSERT INTO Students (StudentName, NIC, CourseID) VALUES (@StudentName, @NIC, @CourseID)";
             using (var cmd = new SQLiteCommand(sql, _conn))
             {
                 cmd.Parameters.AddWithValue("@StudentName", student.StudentName);
                 cmd.Parameters.AddWithValue("@NIC", student.NIC_NO);
+                cmd.Parameters.AddWithValue("@CourseID", student.CourseID);
                 cmd.ExecuteNonQuery();
             }
         }
 
         public void UpdateStudent(Student student)
         {
-            string sql = "UPDATE Students SET StudentName = @StudentName, NIC = @NIC WHERE StudentID = @StudentID";
+            string sql = "UPDATE Students SET StudentName = @StudentName, NIC = @NIC, CourseID = @CourseID WHERE StudentID = @StudentID";
             using (var cmd = new SQLiteCommand(sql, _conn))
             {
                 cmd.Parameters.AddWithValue("@StudentName", student.StudentName);
                 cmd.Parameters.AddWithValue("@NIC", student.NIC_NO);
+                cmd.Parameters.AddWithValue("@CourseID", student.CourseID);
                 cmd.Parameters.AddWithValue("@StudentID", student.StudentID);
                 cmd.ExecuteNonQuery();
             }
@@ -60,7 +60,7 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
         public DataTable GetAllCourses()
         {
             var dt = new DataTable();
-            using (var conn = DatabaseManager.GetConnection())
+            using (var conn = new SQLiteConnection(_conn.ConnectionString))
             {
                 conn.Open();
                 var cmd = new SQLiteCommand("SELECT CourseID, CourseName FROM Courses", conn);
@@ -68,14 +68,19 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
             }
             return dt;
         }
+
         public DataTable GetAllStudents()
         {
             var dt = new DataTable();
-            var cmd = new SQLiteCommand("SELECT * FROM Students", _conn);
+            string sql = @"
+                SELECT s.StudentID, s.StudentName, s.NIC, s.CourseID, c.CourseName
+                FROM Students s
+                LEFT JOIN Courses c ON s.CourseID = c.CourseID";
+
+            var cmd = new SQLiteCommand(sql, _conn);
             var adapter = new SQLiteDataAdapter(cmd);
             adapter.Fill(dt);
             return dt;
         }
-
     }
 }

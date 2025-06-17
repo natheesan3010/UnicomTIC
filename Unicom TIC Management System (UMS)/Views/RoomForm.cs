@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using Unicom_TIC_Management_System__UMS_.Controllers;
 using Unicom_TIC_Management_System__UMS_.Models;
+using Unicom_TIC_Management_System__UMS_.Repositories;
 
 namespace Unicom_TIC_Management_System__UMS_.Views
 {
@@ -44,7 +45,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         {
             if (string.IsNullOrEmpty(cmbRoomName.Text) || cmbRoomType.SelectedIndex == -1)
             {
-                MessageBox.Show("Please fill all fields.");
+                MessageHelper.ShowError("Please fill all fields.");
                 return;
             }
 
@@ -55,7 +56,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             };
 
             controller.AddRoom(room);
-            MessageBox.Show("Room added successfully.");
+            MessageHelper.ShowSuccess("Room added successfully.");
             LoadRooms();
             ResetForm();
         }

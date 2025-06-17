@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Unicom_TIC_Management_System__UMS_.Views;
-using UnicomTICManagementSystem.Repositories;
+using UnicomTicManagementSystem.Data;
 
 
 namespace UnicomTICManagementSystem
@@ -11,14 +11,11 @@ namespace UnicomTICManagementSystem
         [STAThread]
         static void Main()
         {
-            DatabaseManager.InitializeDatabase();  
+            DatabaseManager.CreateTables();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());
         }
-    }
-
-    internal class loginform : Form
-    {
     }
 }

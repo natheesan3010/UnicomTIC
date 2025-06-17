@@ -89,6 +89,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\DatabaseManager.cs" />
+    <Compile Include="Repositories\DbCon.cs" />
+    <Compile Include="Repositories\MessageHelper.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Views\CourseForm.cs">
       <SubType>Form</SubType>

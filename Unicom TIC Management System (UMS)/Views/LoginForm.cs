@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Unicom_TIC_Management_System__UMS_.Controllers;
+using Unicom_TIC_Management_System__UMS_.Repositories;
 
 namespace Unicom_TIC_Management_System__UMS_.Views
 {
@@ -56,7 +57,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             }
             else
             {
-                MessageBox.Show("Unknown role: " + role);
+                MessageHelper.ShowInfo("Unknown role: " + role);
             }
         }
 

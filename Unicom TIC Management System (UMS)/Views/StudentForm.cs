@@ -15,6 +15,10 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         {
             InitializeComponent();
             controller = new StudentController();
+
+            this.Load += StudentForm_Load;
+            this.FormClosed += StudentForm_FormClosed;
+            student_data.CellClick += student_data_CellClick;
         }
 
         private void StudentForm_Load(object sender, EventArgs e)
@@ -97,7 +101,6 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             tname.Text = row.Cells["StudentName"].Value.ToString();
             tnic.Text = row.Cells["NIC"].Value.ToString();
 
-            // Set selected course in combo box
             if (row.Cells["CourseID"].Value != DBNull.Value)
             {
                 cmbcourse.SelectedValue = Convert.ToInt32(row.Cells["CourseID"].Value);
@@ -107,6 +110,12 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         private void LoadStudentData()
         {
             student_data.DataSource = controller.GetAllStudents();
+
+            student_data.Columns["StudentID"].HeaderText = "ID";
+            student_data.Columns["StudentName"].HeaderText = "Name";
+            student_data.Columns["NIC"].HeaderText = "NIC No";
+            student_data.Columns["CourseName"].HeaderText = "Course";
+            student_data.Columns["CourseID"].Visible = false; // Hide if not needed
         }
 
         private void LoadCourses()
@@ -115,7 +124,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             cmbcourse.DisplayMember = "CourseName";
             cmbcourse.ValueMember = "CourseID";
             cmbcourse.DataSource = dt;
-            cmbcourse.SelectedIndex = -1; // No course selected initially
+            cmbcourse.SelectedIndex = -1;
         }
 
         private void ClearInputs()
@@ -128,12 +137,12 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
         private void cmbcourse_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Optional: logic when a course is selected
+            // Optional: handle course change if needed
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            // Optional: logic for filtering/searching students
+            // Optional: add search filter later
         }
     }
 }

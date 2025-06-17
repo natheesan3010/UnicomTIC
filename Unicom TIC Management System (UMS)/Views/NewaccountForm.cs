@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using Unicom_TIC_Management_System__UMS_.Controllers;
 using Unicom_TIC_Management_System__UMS_.Models;
+using Unicom_TIC_Management_System__UMS_.Repositories;
 
 namespace Unicom_TIC_Management_System__UMS_.Views
 {
@@ -36,7 +37,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
             if (string.IsNullOrWhiteSpace(user.Username) || string.IsNullOrWhiteSpace(user.Password))
             {
-                MessageBox.Show("Enter The Username and Password.", " ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageHelper.ShowInfo("Enter The Username and Password.");
                 return;
             }
 
@@ -44,13 +45,13 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
             if (result)
             {
-                MessageBox.Show("Registed Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageHelper.ShowSuccess("Registed Successful!", "Success");
                 new NewaccountForm().Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("This Username Already Used!", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageHelper.ShowError("This Username Already Used!", "Invalid");
             }
         }
 

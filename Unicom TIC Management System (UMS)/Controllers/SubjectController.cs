@@ -1,21 +1,16 @@
-﻿using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SQLite;
 using Unicom_TIC_Management_System__UMS_.Models;
+using Unicom_TIC_Management_System__UMS_.Repositories; // Add this for DbCon
 
 namespace Unicom_TIC_Management_System__UMS_.Controllers
 {
     public class SubjectController
     {
-        private string connectionString = "Data Source=unicomtic.db;Version=3;";
-
-
-
         public void AddSubject(Subject subject)
         {
-            using (var con = new SQLiteConnection(connectionString))
+            using (var con = DbCon.GetConnection())
             {
-                con.Open();
                 var cmd = new SQLiteCommand("INSERT INTO Subjects (SubjectName, CourseID) VALUES (@name, @courseId)", con);
                 cmd.Parameters.AddWithValue("@name", subject.SubjectName);
                 cmd.Parameters.AddWithValue("@courseId", subject.CourseID);
@@ -25,9 +20,8 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
 
         public void UpdateSubject(Subject subject)
         {
-            using (var con = new SQLiteConnection(connectionString))
+            using (var con = DbCon.GetConnection())
             {
-                con.Open();
                 var cmd = new SQLiteCommand("UPDATE Subjects SET SubjectName = @name, CourseID = @courseId WHERE SubjectID = @id", con);
                 cmd.Parameters.AddWithValue("@name", subject.SubjectName);
                 cmd.Parameters.AddWithValue("@courseId", subject.CourseID);
@@ -38,9 +32,8 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
 
         public void DeleteSubject(int subjectId)
         {
-            using (var con = new SQLiteConnection(connectionString))
+            using (var con = DbCon.GetConnection())
             {
-                con.Open();
                 var cmd = new SQLiteCommand("DELETE FROM Subjects WHERE SubjectID = @id", con);
                 cmd.Parameters.AddWithValue("@id", subjectId);
                 cmd.ExecuteNonQuery();
@@ -49,9 +42,8 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
 
         public DataTable GetCourses()
         {
-            using (var con = new SQLiteConnection(connectionString))
+            using (var con = DbCon.GetConnection())
             {
-                con.Open();
                 var cmd = new SQLiteCommand("SELECT CourseID, CourseName FROM Courses", con);
                 var reader = cmd.ExecuteReader();
                 var dt = new DataTable();
@@ -62,9 +54,8 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
 
         public DataTable GetAllSubjects()
         {
-            using (SQLiteConnection con = new SQLiteConnection(connectionString))
+            using (var con = DbCon.GetConnection())
             {
-                con.Open();
                 string query = "SELECT SubjectID, SubjectName, CourseID FROM Subjects";
                 SQLiteDataAdapter da = new SQLiteDataAdapter(query, con);
                 DataTable dt = new DataTable();
@@ -72,7 +63,5 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
                 return dt;
             }
         }
-
     }
 }
-

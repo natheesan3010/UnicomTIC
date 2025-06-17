@@ -3,6 +3,7 @@ using System.Data;
 using System.Windows.Forms;
 using Unicom_TIC_Management_System__UMS_.Controllers;
 using Unicom_TIC_Management_System__UMS_.Models;
+using Unicom_TIC_Management_System__UMS_.Repositories;
 
 namespace Unicom_TIC_Management_System__UMS_.Views
 {
@@ -51,7 +52,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         {
             if (string.IsNullOrWhiteSpace(txtSubjectName.Text) || cmbCourses.SelectedValue == null)
             {
-                MessageBox.Show("Please fill in all fields.");
+                MessageHelper.ShowError("Please fill in all fields.");
                 return;
             }
 
@@ -70,7 +71,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         {
             if (selectedSubjectId == -1 || string.IsNullOrWhiteSpace(txtSubjectName.Text))
             {
-                MessageBox.Show("Please select a subject to update.");
+                MessageHelper.ShowSuccess("Please select a subject to update.");
                 return;
             }
 
@@ -90,17 +91,16 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         {
             if (selectedSubjectId == -1)
             {
-                MessageBox.Show("Please select a subject to delete.");
+                MessageHelper.ShowConfirm("Please select a subject to delete.");
                 return;
             }
 
-            var result = MessageBox.Show("Are you sure you want to delete this subject?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
-            {
+            var result = MessageHelper.ShowConfirm("Are you sure you want to delete this subject?");
+           
                 controller.DeleteSubject(selectedSubjectId);
                 LoadSubjects();
                 ResetForm();
-            }
+            
         }
 
         private void ResetForm()

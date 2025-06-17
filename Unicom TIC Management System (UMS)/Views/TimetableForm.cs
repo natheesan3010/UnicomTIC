@@ -3,6 +3,7 @@ using System.Data;
 using System.Windows.Forms;
 using Unicom_TIC_Management_System__UMS_.Controllers;
 using Unicom_TIC_Management_System__UMS_.Models;
+using Unicom_TIC_Management_System__UMS_.Repositories;
 
 namespace Unicom_TIC_Management_System__UMS_.Views
 {
@@ -25,11 +26,11 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
             cmbTimeSlot.Items.AddRange(new string[]
             {
-        "Monday 10 AM",
-        "Monday 2 PM",
-        "Tuesday 10 AM",
-        "Tuesday 2 PM",
-        "Wednesday 10 AM"
+                "Monday 10 AM",
+                "Monday 2 PM",
+                "Tuesday 10 AM",
+                "Tuesday 2 PM",
+                "Wednesday 10 AM"
             });
 
             // Room ComboBox
@@ -50,7 +51,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         {
             if (cmbSubject.SelectedValue == null || cmbTimeSlot.SelectedItem == null || cmbRoom.SelectedValue == null)
             {
-                MessageBox.Show("Please select all fields.");
+                MessageHelper.ShowInfo("Please select all fields.");
                 return;
             }
 
@@ -63,7 +64,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
             TimetableController.AddTimetable(entry);
             LoadTimetables();
-            MessageBox.Show("Timetable entry added successfully.");
+            MessageHelper.ShowSuccess("Timetable entry added successfully.");
         }
 
         private void gridTimetable_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -82,7 +83,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         {
             if (selectedTimetableId == -1)
             {
-                MessageBox.Show("Please select a timetable entry to update.");
+                MessageHelper.ShowInfo("Please select a timetable entry to update.");
                 return;
             }
 
@@ -96,7 +97,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
             TimetableController.UpdateTimetable(updatedEntry);
             LoadTimetables();
-            MessageBox.Show("Timetable entry updated successfully.");
+            MessageHelper.ShowSuccess("Timetable entry updated successfully.");
 
             // reset selection
             selectedTimetableId = -1;
