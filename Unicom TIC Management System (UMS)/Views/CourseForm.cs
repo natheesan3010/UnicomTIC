@@ -136,5 +136,10 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         {
             // Optional
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

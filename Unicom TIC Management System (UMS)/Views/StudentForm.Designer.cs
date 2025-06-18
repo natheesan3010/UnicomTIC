@@ -23,8 +23,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.cmbcourse = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.student_data)).BeginInit();
             this.panel2.SuspendLayout();
@@ -36,32 +36,32 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-45, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(687, 30);
+            this.panel1.Size = new System.Drawing.Size(866, 49);
             this.panel1.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(191, 7);
+            this.label1.Location = new System.Drawing.Point(239, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 19);
+            this.label1.Size = new System.Drawing.Size(275, 23);
             this.label1.TabIndex = 7;
             this.label1.Text = "STUDENTS   MANAGEMENT";
             // 
             // student_data
             // 
             this.student_data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.student_data.Location = new System.Drawing.Point(43, 140);
+            this.student_data.Location = new System.Drawing.Point(40, 193);
             this.student_data.Margin = new System.Windows.Forms.Padding(4);
             this.student_data.Name = "student_data";
             this.student_data.RowHeadersWidth = 51;
-            this.student_data.Size = new System.Drawing.Size(353, 160);
+            this.student_data.Size = new System.Drawing.Size(444, 160);
             this.student_data.TabIndex = 16;
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(49, 98);
+            this.btn_delete.Location = new System.Drawing.Point(40, 151);
             this.btn_delete.Margin = new System.Windows.Forms.Padding(4);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(98, 34);
@@ -72,7 +72,7 @@
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(171, 98);
+            this.btn_update.Location = new System.Drawing.Point(207, 151);
             this.btn_update.Margin = new System.Windows.Forms.Padding(4);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(100, 34);
@@ -83,7 +83,7 @@
             // 
             // btn_add
             // 
-            this.btn_add.Location = new System.Drawing.Point(294, 98);
+            this.btn_add.Location = new System.Drawing.Point(386, 151);
             this.btn_add.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add.Name = "btn_add";
             this.btn_add.Size = new System.Drawing.Size(98, 34);
@@ -97,7 +97,7 @@
             this.tnic.Location = new System.Drawing.Point(179, 42);
             this.tnic.Margin = new System.Windows.Forms.Padding(4);
             this.tnic.Name = "tnic";
-            this.tnic.Size = new System.Drawing.Size(212, 20);
+            this.tnic.Size = new System.Drawing.Size(212, 22);
             this.tnic.TabIndex = 12;
             // 
             // tname
@@ -105,7 +105,7 @@
             this.tname.Location = new System.Drawing.Point(180, 13);
             this.tname.Margin = new System.Windows.Forms.Padding(4);
             this.tname.Name = "tname";
-            this.tname.Size = new System.Drawing.Size(211, 20);
+            this.tname.Size = new System.Drawing.Size(211, 22);
             this.tname.TabIndex = 11;
             // 
             // label2
@@ -115,7 +115,7 @@
             this.label2.Location = new System.Drawing.Point(66, 45);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 15);
+            this.label2.Size = new System.Drawing.Size(71, 17);
             this.label2.TabIndex = 10;
             this.label2.Text = "NIC NO : ";
             // 
@@ -126,7 +126,7 @@
             this.label3.Location = new System.Drawing.Point(64, 13);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 15);
+            this.label3.Size = new System.Drawing.Size(71, 17);
             this.label3.TabIndex = 9;
             this.label3.Text = "NAME   : ";
             // 
@@ -143,34 +143,34 @@
             this.panel2.Controls.Add(this.tname);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(23, 37);
+            this.panel2.Location = new System.Drawing.Point(53, 67);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(431, 310);
+            this.panel2.Size = new System.Drawing.Size(528, 385);
             this.panel2.TabIndex = 17;
+            // 
+            // cmbcourse
+            // 
+            this.cmbcourse.FormattingEnabled = true;
+            this.cmbcourse.Location = new System.Drawing.Point(179, 81);
+            this.cmbcourse.Name = "cmbcourse";
+            this.cmbcourse.Size = new System.Drawing.Size(211, 24);
+            this.cmbcourse.TabIndex = 18;
+            this.cmbcourse.SelectedIndexChanged += new System.EventHandler(this.cmbcourse_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(63, 77);
+            this.label4.Location = new System.Drawing.Point(63, 87);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(103, 15);
+            this.label4.Size = new System.Drawing.Size(126, 17);
             this.label4.TabIndex = 17;
             this.label4.Text = "COURSE NAME : ";
             // 
-            // cmbcourse
-            // 
-            this.cmbcourse.FormattingEnabled = true;
-            this.cmbcourse.Location = new System.Drawing.Point(179, 71);
-            this.cmbcourse.Name = "cmbcourse";
-            this.cmbcourse.Size = new System.Drawing.Size(211, 21);
-            this.cmbcourse.TabIndex = 18;
-            this.cmbcourse.SelectedIndexChanged += new System.EventHandler(this.cmbcourse_SelectedIndexChanged);
-            // 
             // StudentForm
             // 
-            this.ClientSize = new System.Drawing.Size(499, 371);
+            this.ClientSize = new System.Drawing.Size(783, 508);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "StudentForm";

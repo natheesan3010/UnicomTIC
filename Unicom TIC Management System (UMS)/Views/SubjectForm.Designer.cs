@@ -39,18 +39,18 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-43, 4);
+            this.panel1.Location = new System.Drawing.Point(-43, -12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(571, 23);
+            this.panel1.Size = new System.Drawing.Size(862, 53);
             this.panel1.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(191, 7);
+            this.label1.Location = new System.Drawing.Point(241, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 19);
+            this.label1.Size = new System.Drawing.Size(271, 23);
             this.label1.TabIndex = 7;
             this.label1.Text = "SUBJECTS   MANAGEMENT";
             // 
@@ -60,7 +60,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.label2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(44, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 15);
+            this.label2.Size = new System.Drawing.Size(119, 17);
             this.label2.TabIndex = 8;
             this.label2.Text = "SUBJECT NAME";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -71,7 +71,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.label3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(44, 61);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 15);
+            this.label3.Size = new System.Drawing.Size(115, 17);
             this.label3.TabIndex = 9;
             this.label3.Text = "COURSE NAME";
             // 
@@ -79,7 +79,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             this.txtSubjectName.Location = new System.Drawing.Point(188, 14);
             this.txtSubjectName.Name = "txtSubjectName";
-            this.txtSubjectName.Size = new System.Drawing.Size(209, 20);
+            this.txtSubjectName.Size = new System.Drawing.Size(241, 22);
             this.txtSubjectName.TabIndex = 10;
             // 
             // cmbCourses
@@ -87,14 +87,14 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.cmbCourses.FormattingEnabled = true;
             this.cmbCourses.Location = new System.Drawing.Point(188, 54);
             this.cmbCourses.Name = "cmbCourses";
-            this.cmbCourses.Size = new System.Drawing.Size(209, 21);
+            this.cmbCourses.Size = new System.Drawing.Size(241, 24);
             this.cmbCourses.TabIndex = 11;
             // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(320, 97);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(88, 21);
+            this.btnAdd.Size = new System.Drawing.Size(120, 39);
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -104,7 +104,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             this.btnUpdate.Location = new System.Drawing.Point(188, 97);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(88, 21);
+            this.btnUpdate.Size = new System.Drawing.Size(120, 39);
             this.btnUpdate.TabIndex = 13;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -114,7 +114,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             this.btnDelete.Location = new System.Drawing.Point(47, 99);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(88, 21);
+            this.btnDelete.Size = new System.Drawing.Size(120, 39);
             this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -124,11 +124,11 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             this.dgvsubject.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvsubject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvsubject.Location = new System.Drawing.Point(20, 134);
+            this.dgvsubject.Location = new System.Drawing.Point(19, 153);
             this.dgvsubject.Name = "dgvsubject";
             this.dgvsubject.RowHeadersWidth = 100;
             this.dgvsubject.RowTemplate.Height = 24;
-            this.dgvsubject.Size = new System.Drawing.Size(409, 155);
+            this.dgvsubject.Size = new System.Drawing.Size(441, 173);
             this.dgvsubject.TabIndex = 15;
             this.dgvsubject.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvsubject_RowHeaderMouseClick);
             // 
@@ -143,14 +143,14 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.panel2.Controls.Add(this.txtSubjectName);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(12, 33);
+            this.panel2.Location = new System.Drawing.Point(96, 81);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(452, 312);
+            this.panel2.Size = new System.Drawing.Size(537, 346);
             this.panel2.TabIndex = 16;
             // 
             // SubjectForm
             // 
-            this.ClientSize = new System.Drawing.Size(499, 371);
+            this.ClientSize = new System.Drawing.Size(783, 508);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "SubjectForm";

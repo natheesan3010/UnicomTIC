@@ -81,5 +81,14 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         {
             LoadForm(new RoomForm());
         }
+        private void btnPassword_Click(object sender, EventArgs e)
+        {
+            LoadForm(new ResetForm());
+        }
+
+        private void btnAtt_Click(object sender, EventArgs e)
+        {
+            LoadForm(new AttForm());
+        }
     }
 }

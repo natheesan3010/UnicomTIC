@@ -13,7 +13,6 @@
         private System.Windows.Forms.Button btnTimetables;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel panelHeader;
-        private System.Windows.Forms.Label lblHeading;
         private System.Windows.Forms.PictureBox pictureBoxWelcome;
 
 
@@ -30,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panelHeader = new System.Windows.Forms.Panel();
-            this.lblHeading = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
             this.btnStudents = new System.Windows.Forms.Button();
             this.btnCourses = new System.Windows.Forms.Button();
@@ -41,30 +40,30 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnAtt = new System.Windows.Forms.Button();
+            this.btnPassword = new System.Windows.Forms.Button();
             this.panelHeader.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelHeader
             // 
             this.panelHeader.BackColor = System.Drawing.Color.LightGray;
-            this.panelHeader.Controls.Add(this.lblHeading);
+            this.panelHeader.Controls.Add(this.label1);
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
             this.panelHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(800, 50);
+            this.panelHeader.Size = new System.Drawing.Size(997, 57);
             this.panelHeader.TabIndex = 8;
             // 
-            // lblHeading
+            // label1
             // 
-            this.lblHeading.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblHeading.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.lblHeading.ForeColor = System.Drawing.Color.Black;
-            this.lblHeading.Location = new System.Drawing.Point(0, 0);
-            this.lblHeading.Name = "lblHeading";
-            this.lblHeading.Size = new System.Drawing.Size(800, 50);
-            this.lblHeading.TabIndex = 0;
-            this.lblHeading.Text = "UNICOM TIC MANAGEMENT SYSTEM";
-            this.lblHeading.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(174, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(601, 35);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "UNICOM  TIC  MANAGEMENT   SYSTEM";
             // 
             // panelMain
             // 
@@ -72,13 +71,13 @@
             this.panelMain.Location = new System.Drawing.Point(155, 61);
             this.panelMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(637, 434);
+            this.panelMain.Size = new System.Drawing.Size(801, 555);
             this.panelMain.TabIndex = 0;
             // 
             // btnStudents
             // 
             this.btnStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStudents.Location = new System.Drawing.Point(0, 97);
+            this.btnStudents.Location = new System.Drawing.Point(1, 105);
             this.btnStudents.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStudents.Name = "btnStudents";
             this.btnStudents.Size = new System.Drawing.Size(149, 39);
@@ -90,7 +89,7 @@
             // btnCourses
             // 
             this.btnCourses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCourses.Location = new System.Drawing.Point(0, 146);
+            this.btnCourses.Location = new System.Drawing.Point(1, 152);
             this.btnCourses.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCourses.Name = "btnCourses";
             this.btnCourses.Size = new System.Drawing.Size(149, 39);
@@ -102,7 +101,7 @@
             // btnSubjects
             // 
             this.btnSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubjects.Location = new System.Drawing.Point(0, 199);
+            this.btnSubjects.Location = new System.Drawing.Point(1, 203);
             this.btnSubjects.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSubjects.Name = "btnSubjects";
             this.btnSubjects.Size = new System.Drawing.Size(149, 39);
@@ -114,7 +113,7 @@
             // btnExams
             // 
             this.btnExams.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExams.Location = new System.Drawing.Point(0, 251);
+            this.btnExams.Location = new System.Drawing.Point(1, 254);
             this.btnExams.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExams.Name = "btnExams";
             this.btnExams.Size = new System.Drawing.Size(149, 39);
@@ -126,7 +125,7 @@
             // btnMarks
             // 
             this.btnMarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMarks.Location = new System.Drawing.Point(0, 303);
+            this.btnMarks.Location = new System.Drawing.Point(0, 307);
             this.btnMarks.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMarks.Name = "btnMarks";
             this.btnMarks.Size = new System.Drawing.Size(149, 39);
@@ -138,7 +137,7 @@
             // btnTimetables
             // 
             this.btnTimetables.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimetables.Location = new System.Drawing.Point(-3, 402);
+            this.btnTimetables.Location = new System.Drawing.Point(-2, 407);
             this.btnTimetables.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimetables.Name = "btnTimetables";
             this.btnTimetables.Size = new System.Drawing.Size(149, 47);
@@ -150,7 +149,7 @@
             // btnLogout
             // 
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(-3, 456);
+            this.btnLogout.Location = new System.Drawing.Point(-2, 574);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(149, 39);
@@ -162,7 +161,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1, 50);
+            this.button1.Location = new System.Drawing.Point(2, 60);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(149, 39);
@@ -174,7 +173,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(-3, 348);
+            this.button2.Location = new System.Drawing.Point(-2, 352);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(149, 47);
@@ -183,11 +182,37 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btnAtt
+            // 
+            this.btnAtt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtt.Location = new System.Drawing.Point(-2, 461);
+            this.btnAtt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAtt.Name = "btnAtt";
+            this.btnAtt.Size = new System.Drawing.Size(149, 47);
+            this.btnAtt.TabIndex = 11;
+            this.btnAtt.Text = "Manage Attedents";
+            this.btnAtt.UseVisualStyleBackColor = true;
+            this.btnAtt.Click += new System.EventHandler(this.btnAtt_Click);
+            // 
+            // btnPassword
+            // 
+            this.btnPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPassword.Location = new System.Drawing.Point(-2, 516);
+            this.btnPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPassword.Name = "btnPassword";
+            this.btnPassword.Size = new System.Drawing.Size(149, 47);
+            this.btnPassword.TabIndex = 12;
+            this.btnPassword.Text = "Manage Password\r\n";
+            this.btnPassword.UseVisualStyleBackColor = true;
+            this.btnPassword.Click += new System.EventHandler(this.btnPassword_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 503);
+            this.ClientSize = new System.Drawing.Size(968, 627);
+            this.Controls.Add(this.btnPassword);
+            this.Controls.Add(this.btnAtt);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnStudents);
@@ -204,11 +229,15 @@
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panelHeader.ResumeLayout(false);
+            this.panelHeader.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnAtt;
+        private System.Windows.Forms.Button btnPassword;
     }
 }

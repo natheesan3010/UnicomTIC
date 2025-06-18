@@ -62,5 +62,20 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             DataTable dt = TimetableController.GetTimetables();
             View.DataSource = dt;
         }
+
+        private void LoadForm(Form form)
+        {
+            panelMain1.Controls.Clear(); // old  Form clear 
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panelMain1.Controls.Add(form);
+            form.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LoadForm(new AttForm());
+        }
     }
 }

@@ -92,6 +92,12 @@
     <Compile Include="Repositories\DbCon.cs" />
     <Compile Include="Repositories\MessageHelper.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Views\AttForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AttForm.Designer.cs">
+      <DependentUpon>AttForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CourseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,12 @@
     </Compile>
     <Compile Include="Views\NewaccountForm.Designer.cs">
       <DependentUpon>NewaccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ResetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ResetForm.Designer.cs">
+      <DependentUpon>ResetForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\RoomForm.cs">
       <SubType>Form</SubType>
@@ -180,6 +192,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\AttForm.resx">
+      <DependentUpon>AttForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CourseForm.resx">
       <DependentUpon>CourseForm.cs</DependentUpon>
     </EmbeddedResource>
