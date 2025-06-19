@@ -61,6 +61,12 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             }
         }
 
+        private void linkResetPassword_Click(object sender, EventArgs e)
+        {
+            
+            ResetPasswordForm resetForm = new ResetPasswordForm();
+            resetForm.ShowDialog();
+        }
     }
 }
 

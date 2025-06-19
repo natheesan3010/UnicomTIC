@@ -70,5 +70,37 @@ namespace Unicom_TIC_Management_System__UMS_.Models
             }
             return null;
         }
+
+        // Check if user exists
+        public bool UsernameExists(string username)
+        {
+            using (var conn = new SQLiteConnection(connectionString))
+            {
+                conn.Open();
+                string query = "SELECT COUNT(*) FROM Users WHERE Username = @Username";
+                using (var cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    return (long)cmd.ExecuteScalar() > 0;
+                }
+            }
+        }
+
+        //  Update password
+        public bool UpdatePassword(string username, string newPassword)
+        {
+            using (var conn = new SQLiteConnection(connectionString))
+            {
+                conn.Open();
+                string query = "UPDATE Users SET Password = @Password WHERE Username = @Username";
+                using (var cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Password", newPassword);
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+            }
+        }
     }
 }

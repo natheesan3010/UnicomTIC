@@ -37,16 +37,17 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkResetPassword = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_login
             // 
             this.btn_login.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_login.Location = new System.Drawing.Point(185, 237);
+            this.btn_login.Location = new System.Drawing.Point(246, 237);
             this.btn_login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(135, 60);
+            this.btn_login.Size = new System.Drawing.Size(122, 60);
             this.btn_login.TabIndex = 0;
             this.btn_login.Text = "LOGIN";
             this.btn_login.UseVisualStyleBackColor = true;
@@ -56,7 +57,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(112, 32);
+            this.label1.Location = new System.Drawing.Point(132, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(145, 23);
             this.label1.TabIndex = 1;
@@ -85,7 +86,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(160, 107);
+            this.txtUsername.Location = new System.Drawing.Point(183, 106);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(185, 22);
@@ -94,7 +95,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(160, 170);
+            this.txtPassword.Location = new System.Drawing.Point(183, 174);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(185, 22);
@@ -104,6 +105,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.linkResetPassword);
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Controls.Add(this.label3);
@@ -112,8 +114,20 @@ namespace Unicom_TIC_Management_System__UMS_.Views
             this.panel1.Controls.Add(this.btn_login);
             this.panel1.Location = new System.Drawing.Point(131, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(392, 355);
+            this.panel1.Size = new System.Drawing.Size(418, 355);
             this.panel1.TabIndex = 7;
+            // 
+            // linkResetPassword
+            // 
+            this.linkResetPassword.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkResetPassword.Location = new System.Drawing.Point(22, 237);
+            this.linkResetPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.linkResetPassword.Name = "linkResetPassword";
+            this.linkResetPassword.Size = new System.Drawing.Size(209, 60);
+            this.linkResetPassword.TabIndex = 6;
+            this.linkResetPassword.Text = "FORGOT PASSWORD";
+            this.linkResetPassword.UseVisualStyleBackColor = true;
+            this.linkResetPassword.Click += new System.EventHandler(this.linkResetPassword_Click);
             // 
             // LoginForm
             // 
@@ -145,5 +159,6 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button linkResetPassword;
     }
 }

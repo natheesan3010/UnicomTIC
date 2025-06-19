@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Unicom_TIC_Management_System__UMS_.Views
 {
-    public partial class AttForm : Form
+    public partial class AttendanceForm : Form
     {
-        public AttForm()
+        public AttendanceForm()
         {
             InitializeComponent();
         }

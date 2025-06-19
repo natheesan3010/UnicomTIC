@@ -1,6 +1,6 @@
 ﻿namespace Unicom_TIC_Management_System__UMS_.Views
 {
-    partial class AttForm
+    partial class AttendanceForm
     {
         /// <summary>
         /// Required designer variable.

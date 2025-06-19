@@ -73,6 +73,7 @@
     <Compile Include="Controllers\ExamController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MarkController.cs" />
+    <Compile Include="Controllers\ResetPasswordController.cs" />
     <Compile Include="Controllers\RoomController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\SubjectController.cs" />
@@ -92,11 +93,11 @@
     <Compile Include="Repositories\DbCon.cs" />
     <Compile Include="Repositories\MessageHelper.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
-    <Compile Include="Views\AttForm.cs">
+    <Compile Include="Views\AttendanceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\AttForm.Designer.cs">
-      <DependentUpon>AttForm.cs</DependentUpon>
+    <Compile Include="Views\AttendanceForm.Designer.cs">
+      <DependentUpon>AttendanceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\CourseForm.cs">
       <SubType>Form</SubType>
@@ -134,11 +135,11 @@
     <Compile Include="Views\NewaccountForm.Designer.cs">
       <DependentUpon>NewaccountForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ResetForm.cs">
+    <Compile Include="Views\ResetPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ResetForm.Designer.cs">
-      <DependentUpon>ResetForm.cs</DependentUpon>
+    <Compile Include="Views\ResetPasswordForm.Designer.cs">
+      <DependentUpon>ResetPasswordForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\RoomForm.cs">
       <SubType>Form</SubType>
@@ -192,8 +193,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Views\AttForm.resx">
-      <DependentUpon>AttForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\AttendanceForm.resx">
+      <DependentUpon>AttendanceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CourseForm.resx">
       <DependentUpon>CourseForm.cs</DependentUpon>
@@ -212,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\NewaccountForm.resx">
       <DependentUpon>NewaccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ResetPasswordForm.resx">
+      <DependentUpon>ResetPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\RoomForm.resx">
       <DependentUpon>RoomForm.cs</DependentUpon>

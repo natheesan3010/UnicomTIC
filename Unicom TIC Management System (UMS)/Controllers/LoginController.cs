@@ -1,6 +1,7 @@
 ﻿using System.Data.SQLite;
 using System.Windows.Forms;
 using Unicom_TIC_Management_System__UMS_.Models;
+using Unicom_TIC_Management_System__UMS_.Repositories;
 using Unicom_TIC_Management_System__UMS_.Views;
 
 namespace Unicom_TIC_Management_System__UMS_.Controllers
@@ -27,12 +28,12 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
 
             if (user != null)
             {
-                MessageBox.Show($"Login Success\nUsername: {user.Username}\nRole: {user.Role}");
+                MessageHelper.ShowSuccess($"Login Success\nUsername: {user.Username}\nRole: {user.Role}");
                 loginForm.RedirectToRoleForm(user.Role);
             }
             else
             {
-                MessageBox.Show("User not found or password incorrect!", "Login Failed");
+                MessageHelper.ShowError("User not found or password incorrect!", "Login Failed");
                 loginForm.ShowError("Invalid login credentials");
             }
         }

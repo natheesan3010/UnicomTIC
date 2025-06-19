@@ -75,7 +75,7 @@ namespace Unicom_TIC_Management_System__UMS_.Views
 
         private void button1_Click(object sender, EventArgs e)
         {
-            LoadForm(new AttForm());
+            LoadForm(new AttendanceForm());
         }
     }
 }

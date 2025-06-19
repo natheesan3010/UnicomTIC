@@ -45,7 +45,7 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error adding exam: " + ex.Message);
+                MessageHelper.ShowError("Error adding exam: " + ex.Message);
             }
         }
 
@@ -67,7 +67,7 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error updating exam: " + ex.Message);
+                MessageHelper.ShowError("Error updating exam: " + ex.Message);
             }
         }
 
@@ -87,7 +87,7 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error deleting exam: " + ex.Message);
+                MessageHelper.ShowError("Error deleting exam: " + ex.Message);
             }
         }
 
@@ -109,7 +109,7 @@ namespace Unicom_TIC_Management_System__UMS_.Controllers
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error fetching subjects: " + ex.Message);
+                MessageHelper.ShowError("Error fetching subjects: " + ex.Message);
                 return null;
             }
         }

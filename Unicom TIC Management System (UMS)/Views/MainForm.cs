@@ -83,12 +83,12 @@ namespace Unicom_TIC_Management_System__UMS_.Views
         }
         private void btnPassword_Click(object sender, EventArgs e)
         {
-            LoadForm(new ResetForm());
+            LoadForm(new ResetPasswordForm());
         }
 
         private void btnAtt_Click(object sender, EventArgs e)
         {
-            LoadForm(new AttForm());
+            LoadForm(new AttendanceForm());
         }
     }
 }
