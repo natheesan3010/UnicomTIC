@@ -1,0 +1,202 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HP\\OneDrive\\Desktop\\UMS@6\\UnicomTIC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{59B3BA38-9A1B-48AE-9339-C0D2AD559572}|Unicom TIC Management System (UMS)\\Unicom TIC Management System (UMS).csproj|c:\\users\\hp\\onedrive\\desktop\\ums@6\\unicomtic\\unicom tic management system (ums)\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59B3BA38-9A1B-48AE-9339-C0D2AD559572}|Unicom TIC Management System (UMS)\\Unicom TIC Management System (UMS).csproj|solutionrelative:unicom tic management system (ums)\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59B3BA38-9A1B-48AE-9339-C0D2AD559572}|Unicom TIC Management System (UMS)\\Unicom TIC Management System (UMS).csproj|c:\\users\\hp\\onedrive\\desktop\\ums@6\\unicomtic\\unicom tic management system (ums)\\views\\timetableform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59B3BA38-9A1B-48AE-9339-C0D2AD559572}|Unicom TIC Management System (UMS)\\Unicom TIC Management System (UMS).csproj|solutionrelative:unicom tic management system (ums)\\views\\timetableform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59B3BA38-9A1B-48AE-9339-C0D2AD559572}|Unicom TIC Management System (UMS)\\Unicom TIC Management System (UMS).csproj|c:\\users\\hp\\onedrive\\desktop\\ums@6\\unicomtic\\unicom tic management system (ums)\\views\\timetableform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{59B3BA38-9A1B-48AE-9339-C0D2AD559572}|Unicom TIC Management System (UMS)\\Unicom TIC Management System (UMS).csproj|solutionrelative:unicom tic management system (ums)\\views\\timetableform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59B3BA38-9A1B-48AE-9339-C0D2AD559572}|Unicom TIC Management System (UMS)\\Unicom TIC Management System (UMS).csproj|c:\\users\\hp\\onedrive\\desktop\\ums@6\\unicomtic\\unicom tic management system (ums)\\controllers\\timetablecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59B3BA38-9A1B-48AE-9339-C0D2AD559572}|Unicom TIC Management System (UMS)\\Unicom TIC Management System (UMS).csproj|solutionrelative:unicom tic management system (ums)\\controllers\\timetablecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59B3BA38-9A1B-48AE-9339-C0D2AD559572}|Unicom TIC Management System (UMS)\\Unicom TIC Management System (UMS).csproj|c:\\users\\hp\\onedrive\\desktop\\ums@6\\unicomtic\\unicom tic management system (ums)\\repositories\\messagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59B3BA38-9A1B-48AE-9339-C0D2AD559572}|Unicom TIC Management System (UMS)\\Unicom TIC Management System (UMS).csproj|solutionrelative:unicom tic management system (ums)\\repositories\\messagehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59B3BA38-9A1B-48AE-9339-C0D2AD559572}|Unicom TIC Management System (UMS)\\Unicom TIC Management System (UMS).csproj|c:\\users\\hp\\onedrive\\desktop\\ums@6\\unicomtic\\unicom tic management system (ums)\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59B3BA38-9A1B-48AE-9339-C0D2AD559572}|Unicom TIC Management System (UMS)\\Unicom TIC Management System (UMS).csproj|solutionrelative:unicom tic management system (ums)\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59B3BA38-9A1B-48AE-9339-C0D2AD559572}|Unicom TIC Management System (UMS)\\Unicom TIC Management System (UMS).csproj|c:\\users\\hp\\onedrive\\desktop\\ums@6\\unicomtic\\unicom tic management system (ums)\\controllers\\resetpasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59B3BA38-9A1B-48AE-9339-C0D2AD559572}|Unicom TIC Management System (UMS)\\Unicom TIC Management System (UMS).csproj|solutionrelative:unicom tic management system (ums)\\controllers\\resetpasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59B3BA38-9A1B-48AE-9339-C0D2AD559572}|Unicom TIC Management System (UMS)\\Unicom TIC Management System (UMS).csproj|c:\\users\\hp\\onedrive\\desktop\\ums@6\\unicomtic\\unicom tic management system (ums)\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59B3BA38-9A1B-48AE-9339-C0D2AD559572}|Unicom TIC Management System (UMS)\\Unicom TIC Management System (UMS).csproj|solutionrelative:unicom tic management system (ums)\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59B3BA38-9A1B-48AE-9339-C0D2AD559572}|Unicom TIC Management System (UMS)\\Unicom TIC Management System (UMS).csproj|c:\\users\\hp\\onedrive\\desktop\\ums@6\\unicomtic\\unicom tic management system (ums)\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59B3BA38-9A1B-48AE-9339-C0D2AD559572}|Unicom TIC Management System (UMS)\\Unicom TIC Management System (UMS).csproj|solutionrelative:unicom tic management system (ums)\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\OneDrive\\Desktop\\UMS@6\\UnicomTIC\\Unicom TIC Management System (UMS)\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Unicom TIC Management System (UMS)\\Controllers\\LoginController.cs",
+              "ToolTip": "C:\\Users\\HP\\OneDrive\\Desktop\\UMS@6\\UnicomTIC\\Unicom TIC Management System (UMS)\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Unicom TIC Management System (UMS)\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T10:38:14.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TimetableForm.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\OneDrive\\Desktop\\UMS@6\\UnicomTIC\\Unicom TIC Management System (UMS)\\Views\\TimetableForm.cs",
+              "RelativeDocumentMoniker": "Unicom TIC Management System (UMS)\\Views\\TimetableForm.cs",
+              "ToolTip": "C:\\Users\\HP\\OneDrive\\Desktop\\UMS@6\\UnicomTIC\\Unicom TIC Management System (UMS)\\Views\\TimetableForm.cs",
+              "RelativeToolTip": "Unicom TIC Management System (UMS)\\Views\\TimetableForm.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T10:38:03.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TimetableForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\HP\\OneDrive\\Desktop\\UMS@6\\UnicomTIC\\Unicom TIC Management System (UMS)\\Views\\TimetableForm.cs",
+              "RelativeDocumentMoniker": "Unicom TIC Management System (UMS)\\Views\\TimetableForm.cs",
+              "ToolTip": "C:\\Users\\HP\\OneDrive\\Desktop\\UMS@6\\UnicomTIC\\Unicom TIC Management System (UMS)\\Views\\TimetableForm.cs [Design]",
+              "RelativeToolTip": "Unicom TIC Management System (UMS)\\Views\\TimetableForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T10:38:00.696Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MessageHelper.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\OneDrive\\Desktop\\UMS@6\\UnicomTIC\\Unicom TIC Management System (UMS)\\Repositories\\MessageHelper.cs",
+              "RelativeDocumentMoniker": "Unicom TIC Management System (UMS)\\Repositories\\MessageHelper.cs",
+              "ToolTip": "C:\\Users\\HP\\OneDrive\\Desktop\\UMS@6\\UnicomTIC\\Unicom TIC Management System (UMS)\\Repositories\\MessageHelper.cs",
+              "RelativeToolTip": "Unicom TIC Management System (UMS)\\Repositories\\MessageHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T10:36:42.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\OneDrive\\Desktop\\UMS@6\\UnicomTIC\\Unicom TIC Management System (UMS)\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Unicom TIC Management System (UMS)\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\HP\\OneDrive\\Desktop\\UMS@6\\UnicomTIC\\Unicom TIC Management System (UMS)\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Unicom TIC Management System (UMS)\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T10:35:56.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TimetableController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\OneDrive\\Desktop\\UMS@6\\UnicomTIC\\Unicom TIC Management System (UMS)\\Controllers\\TimetableController.cs",
+              "RelativeDocumentMoniker": "Unicom TIC Management System (UMS)\\Controllers\\TimetableController.cs",
+              "ToolTip": "C:\\Users\\HP\\OneDrive\\Desktop\\UMS@6\\UnicomTIC\\Unicom TIC Management System (UMS)\\Controllers\\TimetableController.cs",
+              "RelativeToolTip": "Unicom TIC Management System (UMS)\\Controllers\\TimetableController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA0wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T10:35:37.565Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ResetPasswordController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\OneDrive\\Desktop\\UMS@6\\UnicomTIC\\Unicom TIC Management System (UMS)\\Controllers\\ResetPasswordController.cs",
+              "RelativeDocumentMoniker": "Unicom TIC Management System (UMS)\\Controllers\\ResetPasswordController.cs",
+              "ToolTip": "C:\\Users\\HP\\OneDrive\\Desktop\\UMS@6\\UnicomTIC\\Unicom TIC Management System (UMS)\\Controllers\\ResetPasswordController.cs",
+              "RelativeToolTip": "Unicom TIC Management System (UMS)\\Controllers\\ResetPasswordController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T10:34:43.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AttendanceController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\OneDrive\\Desktop\\UMS@6\\UnicomTIC\\Unicom TIC Management System (UMS)\\Controllers\\AttendanceController.cs",
+              "RelativeDocumentMoniker": "Unicom TIC Management System (UMS)\\Controllers\\AttendanceController.cs",
+              "ToolTip": "C:\\Users\\HP\\OneDrive\\Desktop\\UMS@6\\UnicomTIC\\Unicom TIC Management System (UMS)\\Controllers\\AttendanceController.cs",
+              "RelativeToolTip": "Unicom TIC Management System (UMS)\\Controllers\\AttendanceController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAA0wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T10:34:28.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\OneDrive\\Desktop\\UMS@6\\UnicomTIC\\Unicom TIC Management System (UMS)\\Controllers\\CourseController.cs",
+              "RelativeDocumentMoniker": "Unicom TIC Management System (UMS)\\Controllers\\CourseController.cs",
+              "ToolTip": "C:\\Users\\HP\\OneDrive\\Desktop\\UMS@6\\UnicomTIC\\Unicom TIC Management System (UMS)\\Controllers\\CourseController.cs",
+              "RelativeToolTip": "Unicom TIC Management System (UMS)\\Controllers\\CourseController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-20T10:33:34.087Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 252,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
