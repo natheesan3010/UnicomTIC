@@ -37,30 +37,29 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-11, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(-8, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(885, 42);
+            this.panel1.Size = new System.Drawing.Size(664, 34);
             this.panel1.TabIndex = 7;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(283, 8);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(196, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 23);
+            this.label1.Size = new System.Drawing.Size(192, 19);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Att  DETAILS";
+            this.label1.Text = "ATTENDANCE  DETAILS";
             // 
-            // AttForm
+            // AttendanceForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(783, 508);
+            this.ClientSize = new System.Drawing.Size(587, 413);
             this.Controls.Add(this.panel1);
-            this.Name = "AttForm";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "AttendanceForm";
             this.Text = "AttForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
