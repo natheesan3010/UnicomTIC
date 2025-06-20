@@ -69,6 +69,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\AttendanceController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\ExamController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Controllers\SubjectController.cs" />
     <Compile Include="Controllers\TimetableController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Models\Attendance.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Exam.cs" />
     <Compile Include="Models\Mark.cs" />

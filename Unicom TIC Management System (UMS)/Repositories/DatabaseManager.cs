@@ -79,17 +79,16 @@ namespace UnicomTicManagementSystem.Data
                     FOREIGN KEY(RoomID) REFERENCES Rooms(RoomID)
                 );
 
-                CREATE TABLE Attendance 
-                (
+                CREATE TABLE Attendances (
                     AttendanceID INTEGER PRIMARY KEY AUTOINCREMENT,
                     StudentID INTEGER,
                     SubjectID INTEGER,
                     Date TEXT,
                     Status TEXT,
-                    UNIQUE(StudentID, SubjectID, Date) -- to prevent duplicates
+                    UNIQUE(StudentID, SubjectID, Date),
+                    FOREIGN KEY(StudentID) REFERENCES Students(StudentID),
+                    FOREIGN KEY(SubjectID) REFERENCES Subjects(SubjectID)
                 );
-
-
             ";
 
                 cmd.ExecuteNonQuery();
